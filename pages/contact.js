@@ -1,9 +1,7 @@
 import ReCAPTCHA from "react-google-recaptcha";
 import React, { useState } from "react";
-import ContactInfo from "./ContactInfo";
-import ContactHomePageLink from "./ContactHomePageLink";
-
-const {REACT_APP_PUBLIC_RECAPTCHA_SITE_KEY} = process.env;
+import ContactInfo from "../comps/ContactInfo";
+import ContactHomePageLink from "../comps/ContactHomePageLink";
 
 const Contact = (props) => {
  
@@ -90,7 +88,7 @@ const handleSubmit = async (event) => {
                                 <br/>
                                 <ReCAPTCHA 
                                 className="container-recaptcha" 
-                                sitekey={REACT_APP_PUBLIC_RECAPTCHA_SITE_KEY} 
+                                sitekey={process.env.NEXT_PUBLIC_PUBLIC_RECAPTCHA_SITE_KEY} 
                                 onChange={handleRecaptchaChange}
                                 />
                             </form>
