@@ -1,10 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Image from 'next/image';
 import Contact from './contact';
+import Link from "next/link";
 
 export default function Home() {
-  
+
   return (
     <div>
       <div className="text-blurbs">
@@ -14,7 +13,7 @@ export default function Home() {
           <br/>
             <p className="text-blurbs-content-home">
                 Please take a look around the website, you can contact Russell right away by 
-                clicking <a>HERE</a>.
+                clicking <Link href="/contact">HERE</Link>.
                 <br/>
                 <br/>
                 Russell is currently accepting new clients. Contact Russell today for a free consultation!
@@ -22,11 +21,11 @@ export default function Home() {
       </div>
         <br/>
         <br/>
-         <img id="homepage-image" src="homepageimage.jpg" alt="Home Page" />
+         <Image id="homepage-image" src="/homepageimage.jpg" alt="Home Page" width={800} height={300} />
         <br />
         <br />
         <br />
-          <img id="homepage-logo-img" src="homepagelogoimage.png" alt="Home Page Logo" />
+          <Image id="homepage-logo-img" src="/homepagelogoimage.png" alt="Home Page Logo" width={760} height={200} />
           <Contact header={false} homepagelink={false} logo={false} />
 </div>
   )
