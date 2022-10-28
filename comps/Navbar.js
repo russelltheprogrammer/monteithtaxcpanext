@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 
 const Navbar = () => {
@@ -31,19 +32,19 @@ const Navbar = () => {
                     <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="toggleMobileMenu">
                         <ul id="navbar-list" className="navbar-nav ms-auto text-center">
                             <li className="nav-item">
-                                <a>Home</a>
+                                <Link href="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a>About</a>
+                                <Link href="/about">About</Link>
                             </li>
                             <li className="nav-item">
-                                <a>Services</a>
+                                <Link href="/services">Services</Link>
                             </li>
                             <li className="nav-item">
-                                <a>Resources</a>
+                                <Link href="/resources">Resources</Link>
                             </li>
                             <li className="nav-item">
-                                <a>Contact</a>
+                                <Link href="/contact">Contact</Link>
                             </li>
                         </ul>
                     </div>

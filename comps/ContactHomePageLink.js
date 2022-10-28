@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 const ContactHomePageLink = ({props}) => {
     
     if(props){
         return ( 
             <div>
-            Click here to go back to the <a>homepage</a>.
+            Click here to go back to the <Link href="/">homepage</Link>.
             </div>
      );
     }
