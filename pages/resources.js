@@ -26,7 +26,7 @@ const Resources = () => {
                     </li>
                     <li>
                         <a href="https://github.com/russelltheprogrammer" rel="noreferrer" target="_blank">Github</a>  
-                        <i className="fas fa-long-arrow-alt-right"></i> Russell&apos;s Web Programming Projects/Applications
+                        &nbsp;&nbsp;<i className="fas fa-long-arrow-alt-right"></i> Russell&apos;s Web Programming Projects/Applications
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/russell-monteith-cpa-0a43975a/" rel="noreferrer" target="_blank">LinkedIn</a>
