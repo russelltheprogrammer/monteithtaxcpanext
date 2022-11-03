@@ -88,7 +88,7 @@ const handleSubmit = async (event) => {
                                 <br/>
                                 <ReCAPTCHA 
                                 className="container-recaptcha" 
-                                sitekey={process.env.NEXT_PUBLIC_LOCAL_PUBLIC_RECAPTCHA_SITE_KEY} 
+                                sitekey={process.env.NEXT_PUBLIC_PUBLIC_RECAPTCHA_SITE_KEY} 
                                 onChange={handleRecaptchaChange}
                                 />
                             </form>
