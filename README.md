@@ -1,35 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Link to monteithtaxcpa website --> [monteithtaxcpa.com](https://monteithtaxcpa.com/)
 
-## Getting Started
+Note: This project was done for my side business' website. It used numerous concepts and was used not only as a marketing page but as a web development learning experience too.
 
-First, run the development server:
+It is a full stack website, it has an email server on the backend for the contact submission form.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## What I used to create?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I used ```next.js```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Key Concepts Used
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
++ React hooks
++ React components
++ React Routers
++ Custom Functions
++ Handle onClick and onChange Functions
++ Sass
++ Bootstrap
++ Google ReCaptcha
++ ```@medias```
++ Website responsiveness, including mobile
++ FontAwesome library
++ Contact Form
++ Express.js
++ Nodemailer
++ Nodemon
++ Cors
++ Dotenv
++ Vercel
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Source Code?
 
-## Learn More
+Check out my source code above.
 
-To learn more about Next.js, take a look at the following resources:
+## Feedback?
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Let me know! I would love to know what you think.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Connect With Me :mailbox:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# monteithtaxcpanext
+LinkedIn: [https://www.linkedin.com/in/russell-monteith-cpa-0a43975a/](https://www.linkedin.com/in/russell-monteith-cpa-0a43975a/)
