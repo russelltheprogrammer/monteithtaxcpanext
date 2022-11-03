@@ -1,15 +1,31 @@
 import ReCAPTCHA from "react-google-recaptcha";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ContactInfo from "../comps/ContactInfo";
 import ContactHomePageLink from "../comps/ContactHomePageLink";
+import Image from 'next/image';
 
 const Contact = (props) => {
- 
+
 const [isVerified, setIsVerified] = useState(false);
 const [values, setValues] = useState({
     firstname: '', lastname: '', email: '', phonenumber: '', subject: '', message: ''
 });
 const [contactSubmit, setContactSubmit] = useState(false);
+const [headerState, setHeaderState] = useState(true);
+const [homepagelinkState, setHomepagelinkState] = useState(true);
+const [logoState, setLogoState] = useState(true);
+
+useEffect(()=> {
+    if(props.header === "homepage") {
+        setHeaderState(false);
+    }
+    if(props.homepagelink === "homepage") {
+        setHomepagelinkState(false);
+    }
+    if(props.logo === "homepage") {
+        setLogoState(false);
+    }
+},[props.header, props.homepagelink, props.logo]);
 
 const handleValueChange = (name) => {
     return ({ target: {value} }) => {
@@ -45,7 +61,7 @@ const handleSubmit = async (event) => {
         return (
             <div>
                 <div className="topic-header">
-                    {props.header ? <h1>CONTACT</h1> : <div></div>}
+                    {headerState ? <h1>CONTACT</h1> : <div></div>}
                 </div>
                 <div id="container-contact" className="container-fluid">
                     <div className="col justify-content-md-center">
@@ -109,13 +125,15 @@ const handleSubmit = async (event) => {
                         <div id="container-after-submit">
                         <br/>
                         Thank you for contacting Russell Monteith CPA PLLC. Your message has been successfully sent. Russell will respond to you as soon as possible. Thank you for your interest.
-                        <ContactHomePageLink props={props.homepagelink} />
+                        <ContactHomePageLink props={homepagelinkState} />
                         </div>
                         <br/>
                         <br/>
                         <br/>
                         <ContactInfo />
-                        {props.logo ? <img id="homepage-logo-img" src="homepagelogoimage.png" alt="Home Page Logo" /> : ""}
+                        {logoState
+                            ? <Image id="homepage-logo-img" src="/homepagelogoimage.png" alt="Home Page Logo" width={780} height={200} /> 
+                            : ""}
                     </div>
             </div>
          );

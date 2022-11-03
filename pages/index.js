@@ -29,7 +29,7 @@ export default function Home() {
         <br />
         <br />
           <Image id="homepage-logo-img" src="/homepagelogoimage.png" alt="Home Page Logo" width={760} height={200} />
-          <Contact header={false} homepagelink={false} logo={false} />
+          <Contact header={"homepage"} homepagelink={"homepage"} logo={"homepage"} />
 </div>
   )
 }
