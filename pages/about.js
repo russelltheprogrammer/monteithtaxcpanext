@@ -36,9 +36,6 @@ const About = () => {
                             See some of my <a href="https://github.com/russelltheprogrammer" rel="noreferrer" target="_blank">programming work here</a>. 
                             I also built this entire website from scratch.
                             <br/>
-                            <br/>
-                            A lot of people know how to do taxes and a lot of people know how to program websites but very few can do both.
-                            I am one of them.
                             </p>
                     </div>
                 </div>
