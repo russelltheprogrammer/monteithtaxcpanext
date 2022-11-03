@@ -25,7 +25,7 @@ const handleRecaptchaChange = (value) => {
 const handleSubmit = async (event) => {
     event.preventDefault();
     if(isVerified){
-       const response = await fetch("/api/contactsubmission.js", {
+       const response = await fetch("/api/contactsubmission", {
            method: "POST",
            headers: {
                "Content-Type": "application/json;charset=utf-8",
