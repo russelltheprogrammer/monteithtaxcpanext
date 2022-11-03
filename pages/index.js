@@ -17,9 +17,6 @@ export default function Home() {
                 <br/>
                 <br/>
                 Russell is currently accepting new clients. Contact Russell today for a free consultation!
-                <br/>
-                <br/>
-                The contact server is currently down, please bear with us as we move to a new server. Thank you!
             </p>
       </div>
         <br/>
