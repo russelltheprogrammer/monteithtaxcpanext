@@ -25,7 +25,7 @@ const handleRecaptchaChange = (value) => {
 const handleSubmit = async (event) => {
     event.preventDefault();
     if(isVerified){
-       const response = await fetch("/api", {
+       const response = await fetch("/api/contactsubmission.js", {
            method: "POST",
            headers: {
                "Content-Type": "application/json;charset=utf-8",
@@ -88,7 +88,7 @@ const handleSubmit = async (event) => {
                                 <br/>
                                 <ReCAPTCHA 
                                 className="container-recaptcha" 
-                                sitekey={process.env.NEXT_PUBLIC_PUBLIC_RECAPTCHA_SITE_KEY} 
+                                sitekey={process.env.NEXT_PUBLIC_LOCAL_PUBLIC_RECAPTCHA_SITE_KEY} 
                                 onChange={handleRecaptchaChange}
                                 />
                             </form>
