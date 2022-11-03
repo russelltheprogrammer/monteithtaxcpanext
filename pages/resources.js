@@ -12,7 +12,7 @@ const Resources = () => {
                     </li>
                     <li>
                         <a href="https://www.irs.gov/payments" rel="noreferrer" target="_blank">IRS Pay</a>  
-                        <i className="fas fa-long-arrow-alt-right"></i> Pay IRS taxes directly via the web (no sign-up necessary)
+                        &nbsp;&nbsp;<i className="fas fa-long-arrow-alt-right"></i> Pay IRS taxes directly via the web (no sign-up necessary)
                     </li>
                     <li>
                         <a href="https://www.tax.ny.gov/" rel="noreferrer" target="_blank">New York State Department Of Taxation and Finance</a>
