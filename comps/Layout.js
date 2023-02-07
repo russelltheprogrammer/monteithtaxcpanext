@@ -11,6 +11,7 @@ const Layout = ({ children }) => {
                 name="description"
                 content="Virtual based tax accountant that provides tax preparation services for individuals and businesses globally. 
                 Offers free consultations."
+                key="desc"
             />
       </Head>
         <div>
