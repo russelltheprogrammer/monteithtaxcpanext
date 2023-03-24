@@ -5,7 +5,7 @@ const Footer = () => {
     return ( 
         <div className="footer-container">
             <div className="gradient-container-bottom"></div>
-            <i className="fas fa-copyright"></i>Copyright {year} - All Rights Reserved - RUSSELL MONTEITH CPA PLLC
+            <i className="fas fa-copyright"></i> Copyright {year} - All Rights Reserved - RUSSELL MONTEITH CPA PLLC
         </div>
      );
 }
