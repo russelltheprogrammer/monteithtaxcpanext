@@ -70,29 +70,29 @@ const handleSubmit = async (event) => {
                         <div className="row-1"></div>
                         <div id="container-submit" className="row-4">
                             <form onSubmit={handleSubmit}>
-                                <label>Full Name<span style={{color: "red"}}>*</span></label>
+                                <label id="contact-label-fullName">Full Name<span style={{color: "red"}}>*</span></label>
                                 <br/>
                                 <input type="text" required name="firstname" placeholder="First Name" value={values.firstname} onChange={handleValueChange('firstname')} style={{width: "40%"}} />
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <input type="text" required name="lastname" placeholder="Last Name" value={values.lastname} onChange={handleValueChange('lastname')} style={{width: "40%"}} />
                                 <br/>
                                 <br/>
-                                <label>Email Address<span style={{color: "red"}}>*</span></label>
+                                <label id="contact-label-email">Email Address<span style={{color: "red"}}>*</span></label>
                                 <br/>
                                 <input type="email" required name="email" placeholder="Email Address" value={values.email} onChange={handleValueChange('email')} style={{width: "83%"}} />
                                 <br/>
                                 <br/>
-                                <label>Phone Number</label>
+                                <label id="contact-label-phoneNumber">Phone Number</label>
                                 <br/>
                                 <input type="phonenumber" placeholder="Phone Number" value={values.phonenumber} onChange={handleValueChange('phonenumber')} style={{width: "83%"}} />
                                 <br/>
                                 <br/>
-                                <label>Subject<span style={{color: "red"}}>*</span></label>
+                                <label id="contact-label-subject">Subject<span style={{color: "red"}}>*</span></label>
                                 <br/>
                                 <input type="text" required name="subject" placeholder="Subject Line" value={values.subject} onChange={handleValueChange('subject')} style={{width: "83%"}} />
                                 <br/>
                                 <br/>
-                                <label>Message<span style={{color: "red"}}>*</span></label>
+                                <label id="contact-label-message">Message<span style={{color: "red"}}>*</span></label>
                                 <br/>
                                 <textarea id="contact-message-textarea" rows="5" type="text" required name="message" placeholder="Message" value={values.message} onChange={handleValueChange('message')} />
                                 <br/>
