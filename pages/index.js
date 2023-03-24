@@ -12,11 +12,11 @@ export default function Home() {
             <h3>A digital tax accounting practice based out of the New York City area</h3>
           <br/>
             <p className="text-blurbs-content-home">
-                Please take a look around the website, you can contact Russell right away by 
+                Please take a look around the website, you can contact me right away by 
                 clicking <Link href="/contact">HERE</Link>.
                 <br/>
                 <br/>
-                Russell is currently accepting new clients. Contact Russell today for a free consultation!
+                I am currently accepting new clients. Contact me today for a free consultation!
             </p>
       </div>
         <br/>
