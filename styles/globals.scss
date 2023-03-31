@@ -78,12 +78,15 @@ body {
   color: black;
 }
 
+.nav-item:hover  {
+  text-decoration: none;
+  box-shadow: 3px 3px 10px black;
+  background: #F8F8F8;
+}
+
 .nav-item > a:hover {
   text-decoration: none;
   color: #105577;
-  box-shadow: 3px 3px 10px black;
-  background: #F8F8F8;
-  padding: 5px;
 }
 
 #container-navbar {
