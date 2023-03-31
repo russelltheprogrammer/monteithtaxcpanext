@@ -133,6 +133,12 @@ body {
   width: 100%;
 }
 
+@media (max-width: 864px) {
+  .text-blurbs {
+    width: 90%;
+  }
+}
+
 .text-blurbs-content-home {
   font-size: 19px;
 }
