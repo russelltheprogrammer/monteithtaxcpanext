@@ -80,8 +80,7 @@ body {
 
 .nav-item:hover  {
   text-decoration: none;
-  box-shadow: 3px 3px 10px black;
-  background: #F8F8F8;
+  background: white
 }
 
 .nav-item > a:hover {
@@ -248,7 +247,10 @@ body {
 
 .text-blurbs-about {
   @extend .text-blurbs;
-  box-shadow: 15px 10px 20px black;
+  border-width: 3px;
+  border-color: black;
+  border-style: solid;
+  box-shadow: 10px 7.5px 5px black;
   background: #F8F8F8;
   margin: 0 auto;
   width: 70%;
@@ -283,7 +285,10 @@ body {
   padding: 15px;
   text-align: center;
   font-family: 'Nunito', sans-serif;
-  box-shadow: 15px 10px 20px black;
+  border-width: 3px;
+  border-color: black;
+  border-style: solid;
+  box-shadow: 10px 7.5px 5px black;
   background: #F8F8F8;
   margin: 0 auto;
   width: 60%;
@@ -317,7 +322,10 @@ body {
   padding-top: 25px;
   text-align: center;
   font-size: 18px;
-  box-shadow: 15px 10px 20px black;
+  border-width: 3px;
+  border-color: black;
+  border-style: solid;
+  box-shadow: 10px 7.5px 5px black;
   background: #F8F8F8;
   margin: 0 auto;
   width: 50%;
@@ -374,7 +382,7 @@ body {
   margin-bottom: 100px;
   margin-left: 25%;
   margin-right: 25%;
-  box-shadow: 5px 0 10px black;
+  box-shadow: 10px 7.5px 5px black;
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
