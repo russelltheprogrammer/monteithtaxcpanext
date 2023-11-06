@@ -20,7 +20,7 @@ const About = () => {
                             situation as unique and thrive to deliver the utmost care and value as if it was my own.
                             <br/>
                             <br/>
-                            I have focused on tax accounting professionally for almost a decade. I&apos;ve done great work with businesses 
+                            I have focused on tax accounting professionally for over a decade. I&apos;ve done great work with businesses 
                             large and small as well as non-profits. I&apos;ve worked with individuals both small and wealthy; 
                             clients both domestic and international. I&apos;m also familiar with the 
                             intricacies of trusts and gift taxes, as well as inheritance. My wide array of experience sets me apart from
