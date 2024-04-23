@@ -14,6 +14,7 @@ const [contactSubmit, setContactSubmit] = useState(false);
 const [headerState, setHeaderState] = useState(true);
 const [homepagelinkState, setHomepagelinkState] = useState(true);
 const [logoState, setLogoState] = useState(true);
+const [error, setError] = useState(false);
 
 useEffect(()=> {
     if(props.header === "homepage") {
@@ -49,15 +50,46 @@ const handleSubmit = async (event) => {
            body: JSON.stringify(values),
        });
        const result = await response.json();
-       alert(result.status);
-       setContactSubmit(true);
+       if (response.ok && result.status === "Message Sent") {
+            setContactSubmit(true);
+            setError(false);
+        } else {
+            setError(true);
+            setContactSubmit(false);
+    }
     }
     else{
         console.log("reCAPTCHA not verified");
     }
 };
 
-     if (!contactSubmit){
+    if (error) {
+        return (
+            <div id="contact-after-submit-error">
+                There has been an error. Please try again or contact the system administrator.
+            </div>
+        );
+    }  else if (contactSubmit) {
+        return (
+            <div>
+                <div className="topic-header">
+                </div>
+                <div id="container-contact" className="container-fluid">
+                        <div id="container-after-submit">
+                        <br/>
+                        Thank you for contacting Russell Monteith CPA PLLC. Your message has been successfully sent. Russell will respond to you as soon as possible. Thank you for your interest.
+                        <ContactHomePageLink props={homepagelinkState} />
+                        </div>
+                        <br/><br/><br/>
+                        <ContactInfo />
+                        {logoState
+                            ? <Image id="homepage-logo-img" src="/homepagelogoimage.png" alt="Home Page Logo" width={780} height={200} /> 
+                            : ""}
+                    </div>
+            </div>
+         );
+        }
+    else {
         return (
             <div>
                 <div className="topic-header">
@@ -115,35 +147,6 @@ const handleSubmit = async (event) => {
                 </div>
             </div>
          );
-    }
-   else if (contactSubmit){
-        return (
-            <div>
-                <div className="topic-header">
-                </div>
-                <div id="container-contact" className="container-fluid">
-                        <div id="container-after-submit">
-                        <br/>
-                        Thank you for contacting Russell Monteith CPA PLLC. Your message has been successfully sent. Russell will respond to you as soon as possible. Thank you for your interest.
-                        <ContactHomePageLink props={homepagelinkState} />
-                        </div>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <ContactInfo />
-                        {logoState
-                            ? <Image id="homepage-logo-img" src="/homepagelogoimage.png" alt="Home Page Logo" width={780} height={200} /> 
-                            : ""}
-                    </div>
-            </div>
-         );
-    }
-    else {
-        return (
-            <div id="contact-after-submit-error">
-                There has been an error. Please contact the system administrator.
-            </div>
-        );
     }
 }
  
