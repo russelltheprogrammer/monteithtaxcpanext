@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { AppBar, Box, Divider, Drawer, IconButton, List, ListItem, Toolbar, Typography } from '@mui/material/';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import CustomLogo from './CustomLogo';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Navbar = (props) => {
 
-        const drawerWidth = 240;
+        const drawerWidth = 300;
         const navItems = [
           { id: 0, description: 'Home', link: '/' },
           { id: 1, description: 'About', link: '/about' },
@@ -15,8 +15,7 @@ const Navbar = (props) => {
           { id: 3, description: 'Resources', link: '/resources' },
           { id: 4, description: 'Contact', link: '/contact' },
         ];
-        const title = 'RUSSELL MONTEITH CPA PLLC';
-      
+
         const { window } = props;
         const [mobileOpen, setMobileOpen] = useState(false);
         const [isNavCollapsed, setIsNavCollapsed] = useState(true);
@@ -28,7 +27,14 @@ const Navbar = (props) => {
         };
       
         const drawer = (
-          <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+          <Box 
+          onClick={handleDrawerToggle} 
+          sx={{ 
+            textAlign: 'center', 
+            px: "5px",  
+            fontFamily: 'Montserrat, sans-serif',
+            fontWeight: 600, 
+            }}>
             <Box
                 sx={{
                     display: 'flex',
@@ -45,18 +51,18 @@ const Navbar = (props) => {
               variant="h6"
               style={{ fontWeight: 600 }}
               sx={{ my: 2 }}>
-              {title}
+                <CustomLogo />
             </Typography>
             <Divider />
             <List>
               <ListItem disablePadding sx={{ textAlign: 'center' }}>
-                <div className="header-list-anchor-container"></div>
+                <div className="navbar-list-anchor-container"></div>
               </ListItem>
               {navItems.map((item) => (
                 <ListItem key={item.id} disablePadding sx={{ textAlign: 'center' }}>
-                  <div className="header-list-anchor-container" key={item.id}>
+                  <div className="navbar-list-anchor-container" key={item.id}>
                     <a
-                      className="header-list-anchor"
+                      className="navbar-anchor"
                       rel="noreferrer"
                       href={item.link}
                     >
@@ -83,9 +89,8 @@ const Navbar = (props) => {
                 component="nav"
                 position="relative"
                 sx={{
-                  background: 'white',
                   py: '0.5%',
-                  backgroundColor: 'lightGray',
+                  backgroundColor: '#f8f8f8',
                 }}
               >
                 <Toolbar>
@@ -100,7 +105,7 @@ const Navbar = (props) => {
                     sx={{
                         color: 'black',
                         width: '40px',
-                        height: '50px',
+                        height: '40px',
                     }}
                     />
                   </IconButton>
@@ -123,11 +128,7 @@ const Navbar = (props) => {
                         },
                       }}
                     >
-                    <span id="navbar-logo-span">
-                        <Image id="navbar-logo-img" className="navbar-logo-span-item" src="/navbarlogoimage.png" width={100} height={25} alt="Logo" />
-                        <Image id="navbar-logo-wordmark" className="navbar-logo-span-item" src="/navbarlogowordmark.png" width={100} height={25} alt="Logo"/>
-                        <span className="hidden">My Logo</span>
-                    </span>
+                    <CustomLogo />
                     <button
                      className="navbar-toggler"
                      type="button"
