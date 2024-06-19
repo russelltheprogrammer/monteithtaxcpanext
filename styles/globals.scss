@@ -4,7 +4,7 @@
 
 body, html {
   text-align: center;
-  background: #f8f8f8;
+  background: white;
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
   display: flex;
@@ -23,6 +23,10 @@ body, html {
 .home-intro-container {
   padding: 20px 5px 10px 5px;
   font-family: "Montserrat";
+}
+
+.home-intro-container h1 {
+  font-weight: bold;
 }
 
 .home-intro-container P {
@@ -80,7 +84,7 @@ body, html {
   width: 100%;
   padding-bottom: 20px;
   padding-top: 20px;
-  background-color: #f8f8f8;
+  background-color: white;
 }
 
 .text-blurbs {

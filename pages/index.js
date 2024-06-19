@@ -8,7 +8,7 @@ const CustomButton = styled(Button)({
   boxShadow: 'none',
   textTransform: 'none',
   fontSize: 16,
-  padding: '6px 12px',
+  padding: '10px 20px',
   border: '1px solid',
   lineHeight: 1.5,
   backgroundColor: 'rgb(76, 128, 153)',
@@ -26,13 +26,13 @@ const CustomButton = styled(Button)({
     '"Segoe UI Symbol"',
   ].join(','),
   '&:hover': {
-    backgroundColor: 'rgb(76, 128, 153)',
+    backgroundColor: 'rgb(109, 163, 188)',
     borderColor: '#0062cc',
     boxShadow: 'none',
   },
   '&:active': {
     boxShadow: 'none',
-    backgroundColor: '#0062cc',
+    backgroundColor: 'rgb(109, 163, 188)',
     borderColor: '#005cbf',
   },
   '&:focus': {
