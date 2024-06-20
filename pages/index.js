@@ -1,8 +1,10 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Contact from './contact';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 
 const CustomButton = styled(Button)({
   boxShadow: 'none',
@@ -40,16 +42,56 @@ const CustomButton = styled(Button)({
   },
 });
 
+const ScrollToTopButton = styled(IconButton)({
+  position: 'fixed',
+  bottom: '25px',
+  right: '25px',
+  borderRadius: '0px',
+  padding: '10px',
+  border: '1px solid black',
+  display: 'none', // Initially hidden
+  zIndex: 1000,
+  backgroundColor: 'rgb(76, 128, 153)',
+  color: 'white',
+  '&:hover': {
+    backgroundColor: 'rgb(109, 163, 188)',
+  },
+});
+
 export default function Home() {
 
   const contactRef = useRef(null);
   const imageWrapperRef = useRef(null);
+  const [showScrollToTopButton, setShowScrollToTopButton] = useState(false);
+  const scrollToTopRef = useRef(null);
 
   const scrollToContact = () => {
     if (contactRef.current) {
       contactRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollHeight = document.documentElement.scrollHeight;
+      const scrollTop = document.documentElement.scrollTop;
+      const clientHeight = document.documentElement.clientHeight;
+      if (scrollTop + clientHeight >= scrollHeight - 5) {
+        setShowScrollToTopButton(true);
+      } else {
+        setShowScrollToTopButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const observerCallback = (entries) => {
@@ -118,8 +160,17 @@ export default function Home() {
             height={200}
           />
           </div>
-          <Contact header={"homepage"} homepagelink={"homepage"} logo={"homepage"} />
           <div ref={contactRef}></div>
+          <Contact header={"homepage"} homepagelink={"homepage"} logo={"homepage"} />
+          {showScrollToTopButton && (
+            <ScrollToTopButton
+              onClick={scrollToTop}
+              ref={scrollToTopRef}
+              style={{ display: showScrollToTopButton ? 'block' : 'none' }}
+            >
+              <KeyboardDoubleArrowUpIcon sx={{ fontSize: 35 }} />
+            </ScrollToTopButton>
+         )}
     </div>
   )
 }
