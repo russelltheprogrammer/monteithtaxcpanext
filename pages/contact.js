@@ -2,13 +2,15 @@ import ReCAPTCHA from "react-google-recaptcha";
 import React, { useState, useEffect } from "react";
 import ContactInfo from "../comps/ContactInfo";
 import ContactHomePageLink from "../comps/ContactHomePageLink";
+import ContactFormField from "../comps/ContactFormField";
 import Image from 'next/image';
+import { Box, Button, Typography, Grid } from '@mui/material';
 
 const Contact = (props) => {
 
 const [isVerified, setIsVerified] = useState(false);
 const [values, setValues] = useState({
-    firstname: '', lastname: '', email: '', phonenumber: '', subject: '', message: ''
+    firstName: '', lastName: '', email: '', phoneNumber: '', subject: '', message: ''
 });
 const [contactSubmit, setContactSubmit] = useState(false);
 const [headerState, setHeaderState] = useState(true);
@@ -91,60 +93,116 @@ const handleSubmit = async (event) => {
         }
     else {
         return (
-            <div>
+            <div className={headerState ? "contact-page-container" : ""}>
                 <div className="topic-header">
                     {headerState ? <h1>CONTACT</h1> : <div></div>}
                 </div>
                 <div id="container-contact" className="container-fluid">
-                    <div className="col justify-content-md-center">
-                        <div className="row-1"></div>
-                        <ContactInfo />
-                        <div className="row-1"></div>
-                        <div id="container-submit" className="row-4">
-                            <form onSubmit={handleSubmit}>
-                                <label id="contact-label-fullName">Full Name<span style={{color: "red"}}>*</span></label>
-                                <br/>
-                                <input type="text" required name="firstname" placeholder="First Name" value={values.firstname} onChange={handleValueChange('firstname')} style={{width: "40%"}} />
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="text" required name="lastname" placeholder="Last Name" value={values.lastname} onChange={handleValueChange('lastname')} style={{width: "40%"}} />
-                                <br/>
-                                <br/>
-                                <label id="contact-label-email">Email Address<span style={{color: "red"}}>*</span></label>
-                                <br/>
-                                <input type="email" required name="email" placeholder="Email Address" value={values.email} onChange={handleValueChange('email')} style={{width: "83%"}} />
-                                <br/>
-                                <br/>
-                                <label id="contact-label-phoneNumber">Phone Number</label>
-                                <br/>
-                                <input type="phonenumber" placeholder="Phone Number" value={values.phonenumber} onChange={handleValueChange('phonenumber')} style={{width: "83%"}} />
-                                <br/>
-                                <br/>
-                                <label id="contact-label-subject">Subject<span style={{color: "red"}}>*</span></label>
-                                <br/>
-                                <input type="text" required name="subject" placeholder="Subject Line" value={values.subject} onChange={handleValueChange('subject')} style={{width: "83%"}} />
-                                <br/>
-                                <br/>
-                                <label id="contact-label-message">Message<span style={{color: "red"}}>*</span></label>
-                                <br/>
-                                <textarea id="contact-message-textarea" rows="5" type="text" required name="message" placeholder="Message" value={values.message} onChange={handleValueChange('message')} />
-                                <br/>
-                                <label style={{color: "red"}}>*Box must be filled out</label>
-                                <br/>
-                                <br/>
-                                <button type="submit" disabled={!isVerified} id="contact-submit-btn" className="btn btn-lg">SUBMIT</button>
-                                <br/>
-                                <br/>
-                                <ReCAPTCHA 
+                   <div className="col justify-content-md-center">
+                     <ContactInfo />
+                    </div>
+                </div>
+                <Box
+                    component="form"
+                    onSubmit={handleSubmit}
+                    sx={{
+                        maxWidth: {xs: '90%', sm: '580px', md: '800px'},
+                        margin: 'auto',
+                        padding: '40px',
+                        backgroundColor: '#4c8099',
+                        borderRadius: '10px',
+                        border: '2px solid black',
+                    }}
+                    >
+                    <Grid container spacing={2}>
+                        <Grid item xs={12}>
+                            <Typography variant="h5" component="h1" gutterBottom color="white">
+                            </Typography>
+                        </Grid>
+                        <ContactFormField 
+                            xs={12}
+                            sm={6}
+                            label={"First Name"}
+                            name={"firstName"}
+                            value={values.firstName}
+                            onChange={handleValueChange('firstName')}
+                            required
+                        />
+                        <ContactFormField 
+                            xs={12}
+                            sm={6}
+                            label={"Last Name"}
+                            name={"lastName"}
+                            value={values.lastName}
+                            onChange={handleValueChange('lastName')}
+                            required
+                        />
+                        <ContactFormField 
+                            xs={12}
+                            label={"Email Address"}
+                            name={"email"}
+                            value={values.email}
+                            onChange={handleValueChange('email')}
+                            required
+                        />
+                        <ContactFormField 
+                            xs={12}
+                            label={"Phone Number"}
+                            name={"phoneNumber"}
+                            value={values.phoneNumber}
+                            onChange={handleValueChange('phoneNumber')}
+                        />
+                         <ContactFormField 
+                            xs={12}
+                            label={"Subject"}
+                            name={"subject"}
+                            value={values.subject}
+                            onChange={handleValueChange('subject')}
+                            required
+                        />
+                          <ContactFormField 
+                            xs={12}
+                            label={"Message"}
+                            name={"message"}
+                            value={values.message}
+                            onChange={handleValueChange('message')}
+                            required
+                            multiline
+                            rows={6}
+                        />
+                        <Grid item xs={12}>
+                        <Typography variant="body2" sx={{fontSize: '20px', color: 'black'}}>
+                            * Box must be filled out
+                        </Typography>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <ReCAPTCHA 
                                 className="container-recaptcha" 
                                 sitekey={process.env.NEXT_PUBLIC_PUBLIC_RECAPTCHA_SITE_KEY} 
                                 onChange={handleRecaptchaChange}
                                 />
-                            </form>
-                            <br/><br/>
-                        </div>
-                        <div className="row-1"></div>
-                    </div>
-                </div>
+                        </Grid>
+                        <Grid item xs={12}>
+                        <Button
+                            type="submit"
+                            variant="contained"
+                            disabled={!isVerified}
+                            sx={{ 
+                                backgroundColor: 'black', 
+                                color: 'white', 
+                                marginTop: '20px',
+                                padding: '10px',
+                                '&:hover': { 
+                                    backgroundColor: '#20383A',
+                                }
+                             }}
+                            fullWidth
+                        >
+                            SUBMIT
+                        </Button>
+                        </Grid>
+                    </Grid>
+                </Box>
             </div>
          );
     }

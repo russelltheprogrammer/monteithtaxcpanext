@@ -1,0 +1,79 @@
+.contact-page-container {
+    padding-bottom: 80px;
+}
+  
+#container-contact {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+#container-contact-info {
+    font-size: 25px;
+    background-color: white;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    padding: 20px;
+    margin-bottom: 100px;
+    margin-left: 25%;
+    margin-right: 25%;
+    box-shadow: 10px 7.5px 5px black;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #container-contact-info {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    #container-contact-info {
+        margin-left: 2%;
+        margin-right: 2%;
+        font-size: 17.5px;
+    }
+}
+
+#container-contact-info > p > a {
+    text-decoration: none;
+}
+
+#contact-info-title {
+    font-weight: bold;
+}
+
+.container-recaptcha {
+    text-align: center;
+    display: inline-block;
+}
+
+#contact-submit-btn {
+    background-color: #105577;
+    color: white;
+    border-color: black;
+    border-radius: 5%;
+    border-width: 3px;
+}
+
+#container-after-submit {
+    color: black;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-size: 25px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+#contact-after-submit-error {
+    margin: 0 auto;
+    margin-top: 15%;
+    text-align: center;
+    width: 52%;
+    right: 25%;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-size: 25px;
+    color: red;
+}
