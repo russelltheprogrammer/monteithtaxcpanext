@@ -1,7 +1,7 @@
 const Resources = () => {
     
     return ( 
-        <div>
+        <div className='section-container'>
             <div className="topic-header">
                 <h1>USEFUL RESOURCES</h1>
             </div>

@@ -1,7 +1,7 @@
 const Services = () => {
     
     return ( 
-        <div>
+        <div className='section-container'>
             <div className="topic-header">
                 <h1>SERVICES</h1>
             </div>
