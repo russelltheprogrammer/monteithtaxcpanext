@@ -18,6 +18,19 @@ body, html {
 
 .home-content-container {
   background-color: white;
+  padding-bottom: 5%;
+}
+
+@media (max-width: 1200px) {
+  .home-content-container {
+    padding-bottom: 10%;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-content-container {
+    padding-bottom: 15%;
+  }
 }
 
 .home-intro-container {
@@ -27,6 +40,7 @@ body, html {
 
 .home-intro-container h1 {
   font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .home-intro-container P {
@@ -78,6 +92,22 @@ body, html {
   #homepage-logo-img {
     max-width: 90%;
   }
+}
+
+@keyframes fadeInAndMove {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Define a class that will trigger the animation */
+.logo-image-animation {
+  animation: fadeInAndMove 1s ease-out forwards;
 }
 
 .topic-header {
