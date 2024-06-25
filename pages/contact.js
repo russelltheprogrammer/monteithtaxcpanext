@@ -168,7 +168,7 @@ const handleSubmit = async (event) => {
                             onChange={handleValueChange('message')}
                             required
                             multiline
-                            rows={6}
+                            rows={8}
                         />
                         <Grid item xs={12}>
                         <Typography variant="body2" sx={{fontSize: '20px', color: 'black'}}>
