@@ -63,6 +63,7 @@ export default function Home() {
   const contactRef = useRef(null);
   const imageWrapperRef = useRef(null);
   const [showScrollToTopButton, setShowScrollToTopButton] = useState(false);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
   const scrollToTopRef = useRef(null);
 
   const scrollToContact = () => {
@@ -74,6 +75,18 @@ export default function Home() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const checkScreenSize = () => {
+    setIsLargeScreen(window.innerWidth > 700);
+  };
+
+  useEffect(() => {
+    checkScreenSize(); // Check on initial mount
+    window.addEventListener('resize', checkScreenSize); // Check on resize
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -162,7 +175,7 @@ export default function Home() {
           </div>
           <div ref={contactRef}></div>
           <Contact header={"homepage"} homepagelink={"homepage"} logo={"homepage"} />
-          {showScrollToTopButton && (
+          {isLargeScreen && showScrollToTopButton && (
             <ScrollToTopButton
               onClick={scrollToTop}
               ref={scrollToTopRef}
