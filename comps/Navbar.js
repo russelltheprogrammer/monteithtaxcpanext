@@ -3,15 +3,14 @@ import { AppBar, Box, Divider, Drawer, IconButton, List, ListItem, Toolbar, Typo
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import CustomLogo from './CustomLogo';
-import Link from 'next/link';
 
 const Navbar = (props) => {
 
         const drawerWidth = 300;
         const navItems = [
           { id: 0, description: 'Home', link: '/' },
-          { id: 1, description: 'About', link: '/about' },
-          { id: 2, description: 'Services', link: '/services' },
+          { id: 1, description: 'Services', link: '/services' },
+          { id: 2, description: 'About', link: '/about' },
           { id: 3, description: 'Resources', link: '/resources' },
           { id: 4, description: 'Contact', link: '/contact' },
         ];
@@ -83,7 +82,6 @@ const Navbar = (props) => {
             sx={{
                 fontFamily: 'Montserrat, sans-serif',
                 fontWeight: 600,
-                fontStyle: 'oblique',
             }}>
               <AppBar
                 component="nav"
@@ -146,7 +144,7 @@ const Navbar = (props) => {
                   <Box
                     sx={{
                       display: { xs: 'none', sm: 'none', md: 'block' },
-                      padding: {xs: '2% 1% 0 0', lg: '2% 3% 0 0'},
+                      padding: {xs: '2% 1% 0 0', lg: '2% 2% 0 0'},
                     }}
                   >
                     {navItems.map((item) => (
