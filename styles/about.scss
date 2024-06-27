@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
 .container-about {
-    height: 100vh;
     width: 100%;
     box-sizing: border-box;
     background-color: #F3F7F9;
@@ -9,108 +10,90 @@
 .wrapper-about {
     display: flex;
     flex-direction: row;
-    padding: 5%;
+    padding: 2% 5%;
+    line-height: 1.3;
   }
-  
-  @media (max-width: 1000px) {
-    .wrapper-about {
-      flex-direction: column;
-    }
+
+@media (max-width: 1536px) and (min-width: 1201px) {
+  .wrapper-about {
+    padding: 2% 5%;
   }
-  
-  .container-about-picture {
-    display: flex;
-    width: 30%;
-    align-items: center;
-    padding: 1%;
-  }
-  
-  @media (max-width: 1000px) {
-    .container-about-picture {
-      width: 100%;
-    }
-  }
-  
-  .container-about-content {
-    width: 70%;
-    
-  }
-  
-  @media (max-width: 1000px) {
-    .container-about-content {
-      width: 100%;
-    }
-  }
-  
-  #about-picture {
-    max-width: 100%;
-    height: auto;
-    width: auto;
-    border-style: solid;
-    border-width: 3.5px;
-    border-color: black;
-    border-radius: 50%;
-  }
-  
-//   @media (min-width: 1025px) and (max-width: 1280px) {
-//     #about-picture {
-//       padding-left: 0;
-//       margin-bottom: 3%;
-//       max-width: 27%;
-//       margin-left: 0%;
-//     }
-//   }
-  
-//   @media (min-width: 801px) and (max-width: 1024px) {
-//     #about-picture {
-//       padding-left: 0;
-//       margin-bottom: 3%;
-//       max-width: 37%;
-//       margin-left: 0%;
-//     }
-//   }
-  
-//   @media (max-width: 800px) {
-//     #about-picture {
-//       padding-left: 0;
-//       margin-bottom: 4%;
-//       max-width: 45%;
-//       margin-left: 0%;
-//     }
-//   }
-  
-  .about-content {
-    text-align: left;
-    margin: 0 auto;
-    padding-top: 10px;
-    // border: 3px solid black;
-    // box-shadow: 10px 7.5px 5px black;
-    // background: #f8f8f8;
-    margin: 0 auto;
-    width: 90%;
+}
+
+@media (max-width: 1200px) and (min-width: 900px) {
+  .wrapper-about {
     padding: 2%;
   }
-  
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .about-content {
-      padding: 4%;
-    }
+}
+
+@media (max-width: 900px) {
+  .wrapper-about {
+    flex-direction: column;
+    padding: 5%;
   }
+}
   
-  @media (max-width: 768px) {
-    .about-content {
-      width: 90%;
-    }
+.container-about-picture {
+  display: flex;
+  width: 30%;
+  align-items: center;
+}
+  
+@media (max-width: 900px) {
+  .container-about-picture {
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 7%;
   }
-  
-  .text-blurbs-content-about {
-    text-align: left;
-    font-size: 18px;
+}
+
+@media (max-width: 600px) {
+  .container-about-picture {
+    width: 100%;
+    justify-content: center;
+    padding: 10% 0;
   }
-  
-  @media (max-width: 768px) {
-    .text-blurbs-content-about {
-      text-align: center;
-    }
+}
+
+.container-about-content {
+  width: 70%;
+}
+
+@media (max-width: 1536px) and (min-width: 900px) {
+  .container-about-content {
+    width: 80%;
+    padding-left: 5%;
   }
-  
+}
+
+@media (max-width: 900px) {
+  .container-about-content {
+    width: 100%;
+  }
+}
+
+.container-about-content-main-title {
+  text-align: left;
+}
+
+.container-about-content-name-title {
+  text-align: left;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-content {
+  text-align: left;
+  padding: 2% 0;
+  font-size: 20px;
+  font-family: "EB Garamond", serif;
+}
+
+#about-picture {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  border: 3.5px solid black;
+  border-radius: 5%;
+}

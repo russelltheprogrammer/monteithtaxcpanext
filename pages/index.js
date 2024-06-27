@@ -10,7 +10,7 @@ const CustomButton = styled(Button)({
   boxShadow: 'none',
   textTransform: 'none',
   fontSize: 16,
-  padding: '10px 20px',
+  padding: '15px 25px',
   border: '1px solid',
   lineHeight: 1.5,
   backgroundColor: 'rgb(76, 128, 153)',
@@ -138,7 +138,7 @@ export default function Home() {
       <div className="home-intro-container">
           <br/>
             <h1>Welcome to RUSSELL MONTEITH CPA PLLC</h1>
-            <h3>A niche tax and technology business</h3>
+            <h3>A niche tax and technology business focused on empowering accounting firms in many different ways</h3>
           <br/>
           <span>
             <CustomButton variant="contained" size="large" onClick={scrollToContact}>
