@@ -41,7 +41,7 @@ const Footer = () => {
     const [isLargeScreen, setIsLargeScreen] = useState(false);
 
     const checkScreenSize = () => {
-        setIsLargeScreen(window.innerWidth > 424);
+        setIsLargeScreen(window.innerWidth > 550);
       };
     
       useEffect(() => {
