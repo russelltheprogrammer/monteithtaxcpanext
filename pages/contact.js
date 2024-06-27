@@ -95,7 +95,7 @@ const handleSubmit = async (event) => {
         return (
             <div className={headerState ? "contact-page-container" : ""}>
                 <div className="topic-header">
-                    {headerState ? <h1>CONTACT</h1> : <div></div>}
+                    {headerState ? <h1 style={{ paddingTop: '20px' }}>CONTACT</h1> : <div></div>}
                 </div>
                 <div id="container-contact" className="container-fluid">
                    <div className="col justify-content-md-center">
@@ -193,7 +193,7 @@ const handleSubmit = async (event) => {
                                 marginTop: '20px',
                                 padding: '10px',
                                 '&:hover': { 
-                                    backgroundColor: '#20383A',
+                                    backgroundColor: '#333333',
                                 }
                              }}
                             fullWidth
