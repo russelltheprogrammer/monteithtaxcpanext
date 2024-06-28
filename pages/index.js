@@ -163,7 +163,6 @@ export default function Home() {
       </div>
         <br />
         <br />
-        <br />
         <div ref={imageWrapperRef}>
           <Image 
             id="homepage-logo-img" 
