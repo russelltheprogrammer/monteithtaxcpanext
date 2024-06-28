@@ -8,38 +8,107 @@
     padding-top: 10px;
 }
 
-#container-contact-info {
-    font-size: 25px;
-    background-color: white;
+.contact-info-container {
+    padding-top: 20px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info-wrapper {
+    font-size: 28px;
+    background-color: #f8f8f8;
     border: 3px solid black;
-    padding: 20px;
-    margin-bottom: 100px;
-    margin-left: 25%;
-    margin-right: 25%;
+    padding: 25px;
+    width: 50%;
     box-shadow: 10px 7.5px 5px black;
+    margin: auto;
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
-    #container-contact-info {
-        margin-left: 10%;
-        margin-right: 10%;
+@media (max-width: 1200px) and (min-width: 900px) {
+    .contact-info-wrapper {
+        width: 70%;
     }
 }
 
-@media (max-width: 480px) {
-    #container-contact-info {
-        margin-left: 2%;
-        margin-right: 2%;
-        font-size: 17.5px;
+@media (max-width: 900px) and (min-width: 600px) {
+    .contact-info-wrapper {
+        width: 86%;
     }
 }
 
-#container-contact-info > p > a {
-    text-decoration: none;
+@media (max-width: 600px) and (min-width: 425px) {
+    .contact-info-wrapper {
+        width: 96%;
+        font-size: 24px;
+    }
 }
 
-#contact-info-title {
+@media (max-width: 424px) and (min-width: 365px) {
+    .contact-info-wrapper {
+        width: 96%;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 364px) {
+    .contact-info-wrapper {
+        width: 96%;
+        font-size: 16px;
+    }
+}
+
+.contact-info-title {
     font-weight: bold;
+    font-size: 34px;
+    line-height: 1.3;
+}
+
+@media (max-width: 600px) and (min-width: 425px) {
+    .contact-info-title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 424px) {
+    .contact-info-title {
+        font-size: 26px;
+    }
+}
+
+.contact-info-items-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25%;
+}
+
+@media (max-width: 1536px) and (min-width: 901px) {
+    .contact-info-items-container {
+        margin-left: 20%;
+    }
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+    .contact-info-items-container {
+        margin-left: 12%;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-info-items-container {
+        margin-left: 0%;
+    }
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.contact-info-item > a {
+    text-decoration: none;
 }
 
 .container-recaptcha {
