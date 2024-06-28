@@ -94,9 +94,11 @@ const handleSubmit = async (event) => {
     else {
         return (
             <div className={headerState ? "contact-page-container" : ""}>
+                {headerState ?
                 <div className="topic-header">
-                    {headerState ? <h1 style={{ paddingTop: '20px' }}>CONTACT</h1> : <div></div>}
-                </div>
+                    <h1>CONTACT</h1> 
+                </div>   
+                : <div></div>}
                 <div id="container-contact" className="container-fluid">
                    <div className="col justify-content-md-center">
                      <ContactInfo />
