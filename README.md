@@ -40,3 +40,22 @@ Let me know! I would love to know what you think.
 ## Connect With Me :mailbox:
 
 LinkedIn: [https://www.linkedin.com/in/russell-monteith-cpa-0a43975a/](https://www.linkedin.com/in/russell-monteith-cpa-0a43975a/)
+
+## Dev Notes
+
+ESLint settings
+
+```
+{
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    }
+
+}
+```

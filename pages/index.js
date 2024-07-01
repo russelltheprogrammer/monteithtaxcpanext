@@ -136,53 +136,53 @@ export default function Home() {
   return (
     <div className="home-content-container">
       <div className="home-intro-container">
-          <br/>
-            <h1>Welcome to RUSSELL MONTEITH CPA PLLC</h1>
-            <h3>A niche tax and technology business focused on empowering accounting firms in many different ways</h3>
-          <br/>
-          <span>
-            <CustomButton variant="contained" size="large" onClick={scrollToContact}>
+        <br/>
+        <h1>Welcome to RUSSELL MONTEITH CPA PLLC</h1>
+        <h3>A niche tax and technology business focused on empowering accounting firms in many different ways</h3>
+        <br/>
+        <span>
+          <CustomButton variant="contained" size="large" onClick={scrollToContact}>
               SCHEDULE A FREE CONSULTATION TODAY
-            </CustomButton>
-          </span>
-          <br/>
-          <br/>
+          </CustomButton>
+        </span>
+        <br/>
+        <br/>
       </div>
       <div className="homepage-image-container">
         <div className="homepage-image-wrapper">
-        <Image 
-          id="homepage-image" 
-          src="/homepageimage.jpg" 
-          alt="Home Page Img" 
-          layout="responsive"
-          width={800} 
-          height={300} 
-          priority={false}
-        />
+          <Image 
+            id="homepage-image" 
+            src="/homepageimage.jpg" 
+            alt="Home Page Img" 
+            layout="responsive"
+            width={800} 
+            height={300} 
+            priority={false}
+          />
         </div>
       </div>
-        <br />
-        <br />
-        <div ref={imageWrapperRef}>
-          <Image 
-            id="homepage-logo-img" 
-            src="/homepagelogoimage.png" 
-            alt="Home Page Logo" 
-            width={760} 
-            height={200}
-          />
-          </div>
-          <div ref={contactRef}></div>
-          <Contact header={"homepage"} homepagelink={"homepage"} logo={"homepage"} />
-          {isLargeScreen && showScrollToTopButton && (
-            <ScrollToTopButton
-              onClick={scrollToTop}
-              ref={scrollToTopRef}
-              style={{ display: showScrollToTopButton ? 'block' : 'none' }}
-            >
-              <KeyboardDoubleArrowUpIcon sx={{ fontSize: 35 }} />
-            </ScrollToTopButton>
-         )}
+      <br />
+      <br />
+      <div ref={imageWrapperRef}>
+        <Image 
+          id="homepage-logo-img" 
+          src="/homepagelogoimage.png" 
+          alt="Home Page Logo" 
+          width={760} 
+          height={200}
+        />
+      </div>
+      <div ref={contactRef}></div>
+      <Contact header={'homepage'} homepagelink={'homepage'} logo={'homepage'} />
+      {isLargeScreen && showScrollToTopButton && (
+        <ScrollToTopButton
+          onClick={scrollToTop}
+          ref={scrollToTopRef}
+          style={{ display: showScrollToTopButton ? 'block' : 'none' }}
+        >
+          <KeyboardDoubleArrowUpIcon sx={{ fontSize: 35 }} />
+        </ScrollToTopButton>
+      )}
     </div>
   )
 }
