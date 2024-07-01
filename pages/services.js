@@ -1,18 +1,21 @@
 const Services = () => {
     
-    return ( 
-        <div className='container-services'>
-            <div className="topic-header">
-                <h1>SERVICES</h1>
-                <h3 className='container-services-subtitle'>How Can Russell Help You?</h3>
-            </div>
-            <div>
-                Specifics
-
-                Areas/Industries
-            </div>
+  return ( 
+    <div className='container-services'>
+      <div className="topic-header">
+        <h1>SERVICES</h1>
+        <h3 className='container-services-subtitle'>How Can Russell Help You?</h3>
+      </div>
+      <div>
+        <div>
+          <h3>Types</h3>
         </div>
-     );
+        <div>
+          <h3>Sectors</h3>
+        </div>
+      </div>
+    </div>
+  );
 }
  
 export default Services;
