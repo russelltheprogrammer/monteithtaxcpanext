@@ -35,57 +35,6 @@ body, html {
   box-sizing: border-box;
 }
 
-.text-blurbs {
-  align-items: center;
-  margin: 0 auto;
-  padding-top: 10px;
-  width: 100%;
-}
-
-@media (max-width: 864px) {
-  .text-blurbs {
-    width: 90%;
-  }
-}
-
-.container-services {
-  font-size: 25px;
-  padding: 15px;
-  text-align: center;
-  font-family: "Nunito", sans-serif;
-  border-width: 3px;
-  border-color: black;
-  border-style: solid;
-  box-shadow: 10px 7.5px 5px black;
-  background: #f8f8f8;
-  margin: 0 auto;
-  width: 60%;
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .container-services {
-    width: 80%;
-  }
-}
-
-@media (max-width: 768px) {
-  .container-services {
-    width: 90%;
-  }
-}
-
-.container-services > ul {
-  text-align: left;
-  display: inline-block;
-  margin-left: 20%;
-}
-
-@media (max-width: 480px) {
-  .container-services > ul {
-    margin: 0 auto;
-  }
-}
-
 .container-resources {
   padding-top: 25px;
   text-align: center;
