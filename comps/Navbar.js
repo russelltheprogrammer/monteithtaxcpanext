@@ -22,16 +22,17 @@ const Navbar = (props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
   const [drawerServicesOpen, setDrawerServicesOpen] = useState(false);
-  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  const handleServicesClick = () => {
-    setDrawerServicesOpen(!drawerServicesOpen);
+  const handleDrawerServicesClick = () => {
+    setDrawerServicesOpen(!drawerServicesOpen)
   };
+
+  console.log('drawerServicesOpen:', drawerServicesOpen);
 
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -39,10 +40,6 @@ const Navbar = (props) => {
 
   const handleMenuClose = () => {
     setAnchorEl(null);
-  };
-
-  const handleNavCollapse = () => {
-    setIsNavCollapsed(!isNavCollapsed);
   };
 
   const drawer = (
@@ -79,17 +76,48 @@ const Navbar = (props) => {
           <div className="navbar-list-anchor-container"></div>
         </ListItem>
         {navItems.map((item) => (
-          <ListItem key={item.id} disablePadding sx={{ textAlign: 'center' }}>
-            <div className="navbar-list-anchor-container" key={item.id}>
-              <a
-                className="navbar-anchor"
-                rel="noreferrer"
-                href={item.link}
-              >
-                {item.description}
-              </a>
-            </div>
-          </ListItem>
+          <div key = {item.id}>
+            {item.description === 'Services' ?
+              !drawerServicesOpen ?
+                <ListItem disablePadding onClick={handleDrawerServicesClick} sx={{ textAlign: 'center' }}>
+                  <div className="navbar-list-anchor-container">
+                    <a
+                      className="navbar-anchor"
+                      rel="noreferrer"
+                      href={item.link}
+                    >
+                      {item.description}
+                      <ExpandMore></ExpandMore>
+                    </a>
+                  </div>
+                </ListItem>
+                :
+                <ListItem disablePadding onClick={handleDrawerServicesClick} sx={{ textAlign: 'center' }}>
+                  <div className="navbar-list-anchor-container">
+                    <a
+                      className="navbar-anchor"
+                      rel="noreferrer"
+                      href={item.link}
+                    >
+                      {item.description}
+                      <ExpandLess></ExpandLess>
+                    </a>
+                  </div>
+                </ListItem>
+              : 
+              <ListItem disablePadding sx={{ textAlign: 'center' }}>
+                <div className="navbar-list-anchor-container">
+                  <a
+                    className="navbar-anchor"
+                    rel="noreferrer"
+                    href={item.link}
+                  >
+                    {item.description}
+                  </a>
+                </div>
+              </ListItem>
+            }
+          </div>
           /* {item.subItems && (
               <Collapse in={drawerServicesOpen} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding sx={{ pl: 4 }} id="services-submenu">
@@ -167,18 +195,6 @@ const Navbar = (props) => {
                 }}
               >
                 <CustomLogo />
-                <button
-                  className="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#toggleMobileMenu"
-                  aria-controls="toggleMobileMenu"
-                  aria-expanded={!isNavCollapsed ? true : false}
-                  aria-label="Toggle navigation"
-                  onClick={handleNavCollapse}
-                >
-                  <span className="navbar-toggler-icon"></span>
-                </button>
               </Typography>
             </Typography>
             <Box
