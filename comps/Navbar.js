@@ -206,17 +206,60 @@ const Navbar = (props) => {
                         anchorEl={anchorEl}
                         open={Boolean(anchorEl)}
                         onClose={handleMenuClose}
+                        slotProps={{
+                          paper: {
+                            elevation: 0,
+                            sx: {
+                              overflow: 'visible',
+                              filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+                              mt: 1.5,
+                              backgroundColor: '#4c8099',
+                              '& .MuiAvatar-root': {
+                                width: 32,
+                                height: 32,
+                                ml: -0.5,
+                                mr: 1,
+                              },
+                              '&::before': {
+                                content: '""',
+                                display: 'block',
+                                position: 'absolute',
+                                top: 0,
+                                right: '45%',
+                                width: 20,
+                                height: 20,
+                                bgcolor: '#4c8099',
+                                transform: 'translateY(-50%) rotate(45deg)',
+                                zIndex: 2,
+                              },
+                            }
+                          }
+                        }}
+                        transformOrigin={{ horizontal: 'center', vertical: 'top' }}
+                        anchorOrigin={{ horizontal: 'center', vertical: 'bottom' }}
                         MenuListProps={{
                           'aria-labelledby': 'basic-button',
                         }}
                       >
                         {item.subItems.map((subItem) => (
-                          <MenuItem key={subItem.id} onClick={handleMenuClose}>
+                          <MenuItem 
+                            key={subItem.id} 
+                            onClick={handleMenuClose}
+                            sx={{
+                              '&:hover': { 
+                                bgcolor: 'rgb(109, 163, 188)',
+                                zIndex: 3,
+                              }
+                            }}
+                          >
                             <a
                               className="navbar-anchor"
                               rel="noreferrer"
                               href={subItem.link}
-                              style={{ textDecoration: 'none', color: 'black' }}
+                              style={{ 
+                                textDecoration: 'none', 
+                                color: 'white',
+                              }}
                             >
                               {subItem.description}
                             </a>
