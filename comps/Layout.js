@@ -6,10 +6,10 @@ const Layout = ({ children }) => {
   return ( 
     <>
       <Head>
-        <title>Russell Monteith CPA | Digital Tax Accountant</title>
+        <title>Russell Monteith CPA | Tax & Technology</title>
         <meta
           name="description"
-          content="Virtual based tax accountant that provides tax preparation services for individuals and businesses globally. 
+          content="Virtual based tax accountant and technology professional that provides tax and technology services for individuals and businesses globally. 
                 Offers free consultations."
           key="desc"
         />
