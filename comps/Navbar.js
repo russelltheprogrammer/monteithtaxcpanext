@@ -1,17 +1,16 @@
 import { useState } from 'react';
-import { AppBar, Box,  Collapse, Divider, Drawer, IconButton, List, ListItem, Menu, MenuItem, Toolbar, Typography } from '@mui/material/';
+import { AppBar, Box, Divider, Drawer, IconButton, List, ListItem, Menu, MenuItem, Toolbar, Typography } from '@mui/material/';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import CustomLogo from './CustomLogo';
 
 const Navbar = (props) => {
-  const drawerWidth = 300;
+  const drawerWidth = '100%';
   const navItems = [
     { id: 0, description: 'Home', link: '/' },
     { id: 1, description: 'About', link: '/about' },
-    { id: 2, description: 'Services', link: '/services', subItems: [
+    { id: 2, description: 'Services', link: null, subItems: [
       { id: 2.1, description: 'Overview', link: '/services/overview' },
       { id: 2.2, description: 'Industries', link: '/services/industry' },
     ]},
@@ -21,18 +20,16 @@ const Navbar = (props) => {
 
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [drawerServicesOpen, setDrawerServicesOpen] = useState(false);
+  const [drawerSubItemOpen, setDrawerSubItemOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  const handleDrawerServicesClick = () => {
-    setDrawerServicesOpen(!drawerServicesOpen)
+  const handleDrawerSubItemClick = () => {
+    setDrawerSubItemOpen(!drawerSubItemOpen)
   };
-
-  console.log('drawerServicesOpen:', drawerServicesOpen);
 
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -44,7 +41,6 @@ const Navbar = (props) => {
 
   const drawer = (
     <Box 
-      onClick={handleDrawerToggle} 
       sx={{ 
         textAlign: 'center', 
         px: '5px',  
@@ -57,18 +53,19 @@ const Navbar = (props) => {
           display: 'flex',
           justifyContent: 'flex-start',
           alignItems: 'center',
-          padding: 1,
+          px: 1,
+          pt: 1,
         }}
       >
         <IconButton onClick={handleDrawerToggle}>
-          <CloseIcon />
+          <CloseIcon sx={{fontSize: '40px'}} />
         </IconButton>
       </Box>
       <Typography
         variant="h6"
         style={{ fontWeight: 600 }}
-        sx={{ my: 2 }}>
-        <CustomLogo />
+        sx={{ mb: 2 }}>
+        <CustomLogo isDrawer={true} />
       </Typography>
       <Divider />
       <List>
@@ -76,66 +73,45 @@ const Navbar = (props) => {
           <div className="navbar-list-anchor-container"></div>
         </ListItem>
         {navItems.map((item) => (
-          <div key = {item.id}>
-            {item.description === 'Services' ?
-              !drawerServicesOpen ?
-                <ListItem disablePadding onClick={handleDrawerServicesClick} sx={{ textAlign: 'center' }}>
-                  <div className="navbar-list-anchor-container">
-                    <a
-                      className="navbar-anchor"
-                      rel="noreferrer"
-                      href={item.link}
-                    >
-                      {item.description}
-                      <ExpandMore></ExpandMore>
-                    </a>
-                  </div>
-                </ListItem>
-                :
-                <ListItem disablePadding onClick={handleDrawerServicesClick} sx={{ textAlign: 'center' }}>
-                  <div className="navbar-list-anchor-container">
-                    <a
-                      className="navbar-anchor"
-                      rel="noreferrer"
-                      href={item.link}
-                    >
-                      {item.description}
-                      <ExpandLess></ExpandLess>
-                    </a>
-                  </div>
-                </ListItem>
-              : 
-              <ListItem disablePadding sx={{ textAlign: 'center' }}>
-                <div className="navbar-list-anchor-container">
-                  <a
-                    className="navbar-anchor"
-                    rel="noreferrer"
-                    href={item.link}
-                  >
-                    {item.description}
-                  </a>
-                </div>
-              </ListItem>
-            }
-          </div>
-          /* {item.subItems && (
-              <Collapse in={drawerServicesOpen} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding sx={{ pl: 4 }} id="services-submenu">
-                  {item.subItems.map((subItem) => (
-                    <ListItem key={subItem.id} button disablePadding>
+          item.subItems ?
+            <div key={item.id} onClick={handleDrawerSubItemClick}>
+              {drawerSubItemOpen ? 
+                item.subItems.map((subItem) => ( 
+                  <ListItem key={subItem.id} disablePadding sx={{ textAlign: 'center' }}>
+                    <div className="navbar-list-anchor-container">
                       <a
                         className="navbar-anchor"
                         rel="noreferrer"
-                        href={subItem.link}
-                        style={{ textDecoration: 'none', color: 'black' }}
+                        href={item.link}
                       >
                         {subItem.description}
                       </a>
-                    </ListItem>
-                  ))}
-                </List>
-              </Collapse>
-            )} */
+                    </div>
+                  </ListItem>
+                ))
+                : 
+                <ListItem key={item.id} disablePadding sx={{ textAlign: 'center' }}>
+                  <div className="navbar-list-anchor-container">
+                    <div className="navbar-anchor" onClick={handleDrawerSubItemClick}>
+                      {item.description}
+                      <KeyboardDoubleArrowRightIcon sx={{ fontSize: '34px' }} />
+                    </div>
+                  </div>
+                </ListItem>
+              }
+            </div>
+            :
+            <ListItem key={item.id} disablePadding sx={{ textAlign: 'center' }}>
+              <div className="navbar-list-anchor-container">
+                <a
+                  className="navbar-anchor"
+                  rel="noreferrer"
+                  href={item.link}
+                >
+                  {item.description}
+                </a>
+              </div>
+            </ListItem>
         ))}
       </List>
     </Box>
@@ -194,7 +170,7 @@ const Navbar = (props) => {
                   },
                 }}
               >
-                <CustomLogo />
+                <CustomLogo isDrawer={false} />
               </Typography>
             </Typography>
             <Box
