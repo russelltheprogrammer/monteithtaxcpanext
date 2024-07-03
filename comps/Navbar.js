@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { AppBar, Box, Divider, Drawer, IconButton, List, ListItem, Menu, MenuItem, Toolbar, Typography } from '@mui/material/';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import CustomLogo from './CustomLogo';
 
 const Navbar = (props) => {
@@ -11,8 +12,8 @@ const Navbar = (props) => {
     { id: 0, description: 'Home', link: '/' },
     { id: 1, description: 'About', link: '/about' },
     { id: 2, description: 'Services', link: null, subItems: [
-      { id: 2.1, description: 'Overview', link: '/services/overview' },
-      { id: 2.2, description: 'Industries', link: '/services/industry' },
+      { id: 2.1, description: 'Overview', link: '/servicesOverview' },
+      { id: 2.2, description: 'Industries', link: '/servicesIndustries' },
     ]},
     { id: 3, description: 'Resources', link: '/resources' },
     { id: 4, description: 'Contact', link: '/contact' },
@@ -76,25 +77,35 @@ const Navbar = (props) => {
           item.subItems ?
             <div key={item.id} onClick={handleDrawerSubItemClick}>
               {drawerSubItemOpen ? 
-                item.subItems.map((subItem) => ( 
-                  <ListItem key={subItem.id} disablePadding sx={{ textAlign: 'center' }}>
+                <div>
+                  <ListItem key={item.id} disablePadding sx={{ textAlign: 'center' }}>
                     <div className="navbar-list-anchor-container">
-                      <a
-                        className="navbar-anchor"
-                        rel="noreferrer"
-                        href={item.link}
-                      >
-                        {subItem.description}
-                      </a>
+                      <div className="navbar-anchor" onClick={handleDrawerSubItemClick}>
+                        {item.description}
+                        <KeyboardDoubleArrowUpIcon sx={{ fontSize: '34px' }} />
+                      </div>
                     </div>
                   </ListItem>
-                ))
+                  {item.subItems.map((subItem) => ( 
+                    <ListItem key={subItem.id} disablePadding sx={{ textAlign: 'center', paddingLeft: '3%' }}>
+                      <div className="navbar-list-anchor-container">
+                        <a
+                          className="navbar-anchor-subitem"
+                          rel="noreferrer"
+                          href={subItem.link}
+                        >
+                          {subItem.description}
+                        </a>
+                      </div>
+                    </ListItem>
+                  ))}
+                </div>
                 : 
                 <ListItem key={item.id} disablePadding sx={{ textAlign: 'center' }}>
                   <div className="navbar-list-anchor-container">
                     <div className="navbar-anchor" onClick={handleDrawerSubItemClick}>
                       {item.description}
-                      <KeyboardDoubleArrowRightIcon sx={{ fontSize: '34px' }} />
+                      <KeyboardDoubleArrowDownIcon sx={{ fontSize: '34px' }} />
                     </div>
                   </div>
                 </ListItem>
