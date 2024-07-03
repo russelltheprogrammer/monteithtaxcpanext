@@ -138,7 +138,7 @@ export default function Home() {
       <div className="home-intro-container">
         <br/>
         <h1>Welcome to RUSSELL MONTEITH CPA PLLC</h1>
-        <h3>A niche tax and technology business focused on empowering accounting firms in many different ways</h3>
+        <h3>A niche tax and technology business focused on empowering accounting firms and businesses who work with them</h3>
         <br/>
         <span>
           <CustomButton variant="contained" size="large" onClick={scrollToContact}>
