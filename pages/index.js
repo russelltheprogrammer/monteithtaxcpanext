@@ -142,7 +142,7 @@ export default function Home() {
         <br/>
         <span>
           <CustomButton variant="contained" size="large" onClick={scrollToContact}>
-              SCHEDULE A FREE CONSULTATION TODAY
+            SCHEDULE A FREE CONSULTATION TODAY
           </CustomButton>
         </span>
         <br/>

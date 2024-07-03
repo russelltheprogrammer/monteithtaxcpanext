@@ -5,7 +5,7 @@ const ContactHomePageLink = ({props}) => {
   if (props) {
     return ( 
       <div>
-            Click here to go back to the <Link href="/">homepage</Link>.
+        Click here to go back to the <Link href="/">homepage</Link>.
       </div>
     );
   }

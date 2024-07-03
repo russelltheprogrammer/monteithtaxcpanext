@@ -62,7 +62,7 @@ const Footer = () => {
             </ThemeProvider>
             : null
           }
-                    Copyright {year} - All Rights Reserved - RUSSELL MONTEITH CPA PLLC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Copyright {year} - All Rights Reserved - RUSSELL MONTEITH CPA PLLC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <a href={url} target="_blank" rel="noopener noreferrer">
             <ThemeProvider theme={linkedInIconTheme}>
               <LinkedInIcon className='footer-icon' />

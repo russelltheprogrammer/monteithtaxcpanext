@@ -200,7 +200,7 @@ const Contact = (props) => {
                 }}
                 fullWidth
               >
-                            SUBMIT
+                SUBMIT
               </Button>
             </Grid>
           </Grid>
