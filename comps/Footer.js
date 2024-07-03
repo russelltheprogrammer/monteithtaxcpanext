@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
