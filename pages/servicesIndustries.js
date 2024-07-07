@@ -1,24 +1,31 @@
 import { Box, Card, CardContent, Typography, Grid } from '@mui/material';
 import CalculateIcon from '@mui/icons-material/Calculate';
-import PlaceIcon from '@mui/icons-material/Place';
+import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+import DeviceHubIcon from '@mui/icons-material/DeviceHub';
+import PublicIcon from '@mui/icons-material/Public';
+import BusinessIcon from '@mui/icons-material/Business';
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import HomeWorkIcon from '@mui/icons-material/HomeWork';
+import ComputerIcon from '@mui/icons-material/Computer';
 
 const ServicesIndustries = () => {
 
   const iconStyle = {
     mr: 2,
-    fontSize: 'large'
+    fontSize: '36px'
   };
 
   const industries = [
     { id: 1, title: 'Accounting & Financial Services', icon: <CalculateIcon sx={iconStyle} />},
-    { id: 2, title: 'Professional Services', icon: <PlaceIcon sx={iconStyle} />},
-    { id: 3, title: 'Healthcare', icon: <PlaceIcon sx={iconStyle} />},
-    { id: 4, title: 'Technology & Startups --Tax Software, Automation, Data Analysis, SAS', icon: <PlaceIcon sx={iconStyle} />},
-    { id: 5, title: 'Foreign -- Expatriates', icon: <PlaceIcon sx={iconStyle} />},
-    { id: 6, title: 'Small Businesses', icon: <PlaceIcon sx={iconStyle} />},
-    { id: 7, title: 'Contractors & Freelancers', icon: <PlaceIcon sx={iconStyle} />},
-    { id: 8, title: 'Real Estate', icon: <PlaceIcon sx={iconStyle} />},
-    { id: 9, title: 'Tax Software', icon: <PlaceIcon sx={iconStyle} />},
+    { id: 2, title: 'Other Professional Services', icon: <MiscellaneousServicesIcon sx={iconStyle} />},
+    { id: 3, title: 'Healthcare', icon: <LocalHospitalIcon sx={iconStyle} />},
+    { id: 4, title: 'Technology & Startups --Tax Software, Automation, Data Analysis, SAS', icon: <DeviceHubIcon sx={iconStyle} />},
+    { id: 5, title: 'Foreign -- Expatriates', icon: <PublicIcon sx={iconStyle} />},
+    { id: 6, title: 'Small Businesses', icon: <BusinessIcon sx={iconStyle} />},
+    { id: 7, title: 'Contractors & Freelancers', icon: <BusinessCenterIcon sx={iconStyle} />},
+    { id: 8, title: 'Real Estate', icon: <HomeWorkIcon sx={iconStyle} />},
+    { id: 9, title: 'Tax Software', icon: <ComputerIcon sx={iconStyle} />},
   ];
 
   return (
@@ -58,16 +65,23 @@ const ServicesIndustries = () => {
                 display: 'flex', 
                 flexDirection: 'column',
                 border: 'none',  // Explicitly removing border
-                boxShadow: 'none'
+                boxShadow: 'none',
+                backgroundColor: 'white',
               }}>
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Box sx={{ 
                     display: 'flex', 
                     alignItems: 'center', 
+                    justifyContent: 'center',
                     mb: 1,  
                   }}>
                     {industry.icon}
-                    <Typography variant="h6" component="div" sx={{ textAlign: 'left' }}>
+                    <Typography 
+                      variant="h6" 
+                      component="div" 
+                      sx={{ 
+                        textAlign: 'left' 
+                      }}>
                       {industry.title}
                     </Typography>
                   </Box>
