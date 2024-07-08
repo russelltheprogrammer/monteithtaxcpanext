@@ -12,8 +12,8 @@ const Navbar = (props) => {
     { id: 0, description: 'Home', link: '/' },
     { id: 1, description: 'About', link: '/about' },
     { id: 2, description: 'Services', link: null, subItems: [
-      { id: 2.1, description: 'Overview', link: '/servicesOverview' },
-      { id: 2.2, description: 'Industries', link: '/servicesIndustries' },
+      { id: 2.1, description: 'Overview', link: '/servicesovervieww' },
+      { id: 2.2, description: 'Industries', link: '/servicesindustriess' },
     ]},
     { id: 3, description: 'Resources', link: '/resources' },
     { id: 4, description: 'Contact', link: '/contact' },

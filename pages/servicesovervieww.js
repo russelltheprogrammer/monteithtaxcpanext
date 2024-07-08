@@ -1,7 +1,7 @@
 import { Place } from '@mui/icons-material';
-import { Box, CardContent, Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 
-const Servicesoverview = () => {
+const ServicesOverview = () => {
 
   const iconStyle = {
     mr: 2,
@@ -19,6 +19,7 @@ const Servicesoverview = () => {
     { id: 8, title: 'Business Development', icon: <Place sx={iconStyle} />},
   ];
 
+    
   return ( 
     <div className='container-services'>
       <div className="topic-header" id="topic-header-services">
@@ -30,30 +31,11 @@ const Servicesoverview = () => {
         <Grid container spacing={0}>
           {services.map((service) => (
             <Grid item xs={12} sm={6} md={3} key={service.id}>
-              <CardContent sx={{ 
-                flexGrow: 1,
-                display: 'flex', 
-                flexDirection: 'column', 
-                justifyContent: 'center',
-                width: '100%',
-                height: '100%', 
-              }}>
-                <Box
-                  sx={{
-                    textAlign: 'left',
-                  }}
-                >
-                  <Typography>
-                    {service.icon}
-                  </Typography>
-                  <Typography variant="h5">
-                    {service.title}
-                  </Typography>
-                  <Typography variant="body1">
-                  This is the description for the service.
-                  </Typography>
-                </Box>
-              </CardContent>
+              <Box>
+                <Typography>{service.icon}</Typography>
+                <Typography variant="h5">{service.title}</Typography>
+                <Typography variant="body1">This is the description for the service.</Typography>
+              </Box>
             </Grid>
           ))}
         </Grid>
@@ -62,4 +44,4 @@ const Servicesoverview = () => {
   );
 }
  
-export default Servicesoverview;
+export default ServicesOverview;

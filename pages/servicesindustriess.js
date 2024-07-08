@@ -9,7 +9,7 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import HomeWorkIcon from '@mui/icons-material/HomeWork';
 import ComputerIcon from '@mui/icons-material/Computer';
 
-const Servicesindustries = () => {
+const ServicesIndustries = () => {
 
   const iconStyle = {
     mr: 2,
@@ -93,4 +93,4 @@ const Servicesindustries = () => {
   );
 }
  
-export default Servicesindustries;
+export default ServicesIndustries;
