@@ -13,24 +13,24 @@ const ServicesIndustries = () => {
 
   const iconStyle = {
     mr: 2,
-    fontSize: '36px'
+    fontSize: '50px'
   };
 
   const industries = [
     { id: 1, title: 'Accounting & Financial Services', icon: <CalculateIcon sx={iconStyle} />},
     { id: 2, title: 'Other Professional Services', icon: <MiscellaneousServicesIcon sx={iconStyle} />},
     { id: 3, title: 'Healthcare', icon: <LocalHospitalIcon sx={iconStyle} />},
-    { id: 4, title: 'Technology & Startups --Tax Software, Automation, Data Analysis, SAS', icon: <DeviceHubIcon sx={iconStyle} />},
-    { id: 5, title: 'Foreign -- Expatriates', icon: <PublicIcon sx={iconStyle} />},
+    { id: 4, title: 'Technology & Startups', icon: <DeviceHubIcon sx={iconStyle} />},
+    { id: 5, title: 'Foreign Including Expatriates', icon: <PublicIcon sx={iconStyle} />},
     { id: 6, title: 'Small Businesses', icon: <BusinessIcon sx={iconStyle} />},
     { id: 7, title: 'Contractors & Freelancers', icon: <BusinessCenterIcon sx={iconStyle} />},
     { id: 8, title: 'Real Estate', icon: <HomeWorkIcon sx={iconStyle} />},
-    { id: 9, title: 'Tax Software', icon: <ComputerIcon sx={iconStyle} />},
+    { id: 9, title: 'Tax Software, Automation, Data', icon: <ComputerIcon sx={iconStyle} />},
   ];
 
   return (
     <div className='container-services'>
-      <div className="topic-header">
+      <div className="topic-header" id="topic-header-services">
         <h1>INDUSTRIES</h1>
         <h3 className='container-services-subtitle'>Featured Business Sectors Russell Has Worked With</h3>
         <h5 className='container-services-subtitle-two'>Business Type Not Listed? That doesn&rsquo;t mean Russell cannot help you. Contact him to find out more information.</h5>
@@ -40,25 +40,14 @@ const ServicesIndustries = () => {
         mb: 4,
         position: 'relative',
         textAlign: 'center',
-        p: 4,
+        py: 4,
+        px: {xs: 4, lg: 10}
       }}>
-        <Box sx={{
-          width: 0,
-          height: 0,
-          borderLeft: '12px solid transparent',
-          borderRight: '12px solid transparent',
-          borderBottom: '12px solid #fff',
-          position: 'absolute',
-          top: 0,
-          left: '50%',
-          transform: 'translate(-50%, -50%) rotate(180deg)',
-          zIndex: 1,
-        }} />
-        <Grid container spacing={4} justifyContent="flex-start">
+        <Grid container spacing={2} justifyContent="flex-start">
           {industries.map((industry) => (
             <Grid item xs={12} sm={6} md={4} key={industry.id}>
               <Card sx={{ 
-                minWidth: 275, 
+                minWidth: { xs: 220, sm: 250, md: 250, lg: 280 }, 
                 minHeight: 150, 
                 width: '100%', 
                 height: '100%', 
@@ -66,21 +55,31 @@ const ServicesIndustries = () => {
                 flexDirection: 'column',
                 border: 'none',  // Explicitly removing border
                 boxShadow: 'none',
-                backgroundColor: 'white',
+                backgroundColor: '#F3F7F9',
+                // backgroundColor: 'white',
               }}>
-                <CardContent sx={{ flexGrow: 1 }}>
+                <CardContent sx={{ 
+                  flexGrow: 1,
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  justifyContent: 'center',
+                  width: '100%',
+                  height: '100%', 
+                }}>
                   <Box sx={{ 
                     display: 'flex', 
                     alignItems: 'center', 
-                    justifyContent: 'center',
-                    mb: 1,  
+                    pl: '2%',
+                    mb: 1,
+                    textAlign: 'left' ,  
                   }}>
                     {industry.icon}
                     <Typography 
                       variant="h6" 
                       component="div" 
                       sx={{ 
-                        textAlign: 'left' 
+                        fontFamily: 'Montserrat, sans-serif',
+                        fontSize: '24px',
                       }}>
                       {industry.title}
                     </Typography>
