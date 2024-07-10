@@ -9,37 +9,33 @@ import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp
 const ConsultationButton = styled(Button)({
   boxShadow: 'none',
   textTransform: 'none',
-  fontSize: 16,
-  padding: '15px 25px',
+  fontSize: 18,
+  padding: '20px 60px',
   border: '1px solid',
   lineHeight: 1.5,
   backgroundColor: 'rgb(76, 128, 153)',
   borderColor: 'rgb(56, 108, 133)',
-  fontFamily: [
-    '-apple-system',
-    'BlinkMacSystemFont',
-    '"Segoe UI"',
-    'Roboto',
-    '"Helvetica Neue"',
-    'Arial',
-    'sans-serif',
-    '"Apple Color Emoji"',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
-  ].join(','),
+  fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
+  fontWeight: 'bold',
   '&:hover': {
-    backgroundColor: 'rgb(109, 163, 188)',
-    borderColor: 'rgb(89, 143, 168)',
+    backgroundColor: 'rgb(36, 88, 113)',
+    borderColor: 'rgb(16, 68, 93)',
     boxShadow: 'none',
+    padding: '20px 100px',
   },
   '&:active': {
     boxShadow: 'none',
-    backgroundColor: 'rgb(109, 163, 188)',
-    borderColor: 'rgb(73, 126, 151)',
+    backgroundColor: 'rgb(36, 88, 113)',
+    borderColor: 'rgb(16, 68, 93)',
   },
   '&:focus': {
     boxShadow: '0 0 0 0.2rem rgba(93, 146, 171)',
   },
+  '@media (max-width: 600px)': {
+    '&:hover': {
+      padding: '20px 60px',
+    }
+  }
 });
 
 const ScrollToTopButton = styled(IconButton)({
@@ -54,7 +50,7 @@ const ScrollToTopButton = styled(IconButton)({
   backgroundColor: 'rgb(76, 128, 153)',
   color: 'white',
   '&:hover': {
-    backgroundColor: 'rgb(109, 163, 188)',
+    backgroundColor: 'rgb(36, 88, 113)',
   },
 });
 
@@ -138,7 +134,9 @@ export default function Home() {
       <div className="home-intro-container">
         <br/>
         <h1>Welcome to RUSSELL MONTEITH CPA PLLC</h1>
-        <h3>A niche tax and technology business focused on empowering accounting firms and businesses who work with them</h3>
+        <h3>
+          An <span>EXPERT</span> in <span>TAX & ACCOUNTING</span> and the <span>TECHNOLOGY</span> that drives them.
+        </h3>
         <br/>
         <span>
           <ConsultationButton variant="contained" size="large" onClick={scrollToContact}>

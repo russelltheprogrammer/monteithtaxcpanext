@@ -26,16 +26,25 @@
     letter-spacing: 2px;
     font-size: 48px;
     color: #333333;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     animation: fadeInDown 1s ease-in-out;
+    padding-bottom: 10px;
   }
   
   .home-intro-container h3 {
-    font-size: 24px;
+    font-size: 26px;
     color: #555555;
     margin-bottom: 30px;
     animation: fadeInUp 1s ease-in-out;
     font-family: "Montserrat";
+    letter-spacing: 1px;
+    padding-bottom: 30px;
+  }
+
+  .home-intro-container h3 span {
+    font-weight: 800;
+    font-style: italic;
+    font-size: 28px;
   }
   
   @keyframes fadeInDown {
