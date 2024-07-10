@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 
-const CustomButton = styled(Button)({
+const ConsultationButton = styled(Button)({
   boxShadow: 'none',
   textTransform: 'none',
   fontSize: 16,
@@ -141,9 +141,9 @@ export default function Home() {
         <h3>A niche tax and technology business focused on empowering accounting firms and businesses who work with them</h3>
         <br/>
         <span>
-          <CustomButton variant="contained" size="large" onClick={scrollToContact}>
+          <ConsultationButton variant="contained" size="large" onClick={scrollToContact}>
             SCHEDULE A FREE CONSULTATION TODAY
-          </CustomButton>
+          </ConsultationButton>
         </span>
         <br/>
         <br/>
