@@ -41,10 +41,10 @@ const ContactFormField = ({ xs, sm, label, name, value, onChange, required, mult
         multiline={multiline}
         rows={rows}
         InputLabelProps={{
-          style: { color: 'white' },
+          style: { color: 'white', fontFamily: 'Arial Helvetica sans-serif', fontSize: '20px', },
         }}
         inputProps={{
-          style: { color: 'white' },
+          style: { color: 'white', fontFamily: 'Arial Helvetica sans-serif', },
         }}
       />
     </Grid>

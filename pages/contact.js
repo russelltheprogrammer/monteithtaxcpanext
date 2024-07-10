@@ -68,7 +68,7 @@ const Contact = (props) => {
   if (error) {
     return (
       <div id="contact-after-submit-error">
-                There has been an error. Please try again or contact the system administrator.
+          There has been an error. Please try again or contact the system administrator.
       </div>
     );
   }  else if (contactSubmit) {
@@ -79,7 +79,7 @@ const Contact = (props) => {
         <div id="container-contact" className="container-fluid">
           <div id="container-after-submit">
             <br/>
-                        Thank you for contacting Russell Monteith CPA PLLC. Your message has been successfully sent. Russell will respond to you as soon as possible. Thank you for your interest.
+              Thank you for contacting Russell Monteith CPA PLLC. Your message has been successfully sent. Russell will respond to you as soon as possible. Thank you for your interest.
             <ContactHomePageLink props={homepagelinkState} />
           </div>
           <br/><br/><br/>
@@ -87,6 +87,7 @@ const Contact = (props) => {
           {logoState
             ? <Image id="homepage-logo-img" src="/homepagelogoimage.png" alt="Home Page Logo" width={780} height={200} /> 
             : ''}
+          <br/><br/><br/>
         </div>
       </div>
     );
@@ -118,8 +119,7 @@ const Contact = (props) => {
         >
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <Typography variant="h5" component="h1" gutterBottom color="white">
-              </Typography>
+              <Typography variant="h5" component="h1" gutterBottom color="white"></Typography>
             </Grid>
             <ContactFormField 
               xs={12}
@@ -173,8 +173,13 @@ const Contact = (props) => {
               rows={8}
             />
             <Grid item xs={12}>
-              <Typography variant="body2" sx={{fontSize: '20px', color: 'black'}}>
-                            * Box must be filled out
+              <Typography 
+                variant="body2" 
+                sx={{
+                  fontSize: '22px', 
+                  color: 'black',
+                }}>
+                  * Box must be filled out
               </Typography>
             </Grid>
             <Grid item xs={12}>

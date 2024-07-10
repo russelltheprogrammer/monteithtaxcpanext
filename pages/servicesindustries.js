@@ -77,8 +77,9 @@ const ServicesIndustries = () => {
                       variant="h6" 
                       component="div" 
                       sx={{ 
-                        fontFamily: 'Montserrat, sans-serif',
+                        fontFamily: 'Montserrat',
                         fontSize: '24px',
+                        fontWeight: 600,
                       }}>
                       {industry.title}
                     </Typography>
