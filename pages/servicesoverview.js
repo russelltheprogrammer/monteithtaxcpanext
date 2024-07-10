@@ -108,16 +108,16 @@ const ServicesOverview = () => {
                 height: '100%', 
                 display: 'flex', 
                 flexDirection: 'column',
-                border: 'none',  // Explicitly removing border
+                border: 'none',
                 boxShadow: 'none',
                 backgroundColor: '#F3F7F9',
                 '&:hover': {
                   '& .learnMoreBtn': {
                     opacity: 1,  // Make button fully visible on hover
-                    transform: 'translateY(-10px)'  // Move button up slightly
+                    transform: 'translate(-50%, -30%)'
                   },
-                  backgroundColor: '#004C7F',  // Card background change on hover
-                  color: 'white',  // Text color change on hover
+                  backgroundColor: '#004C7F',
+                  color: 'white',
                 }
               }}>
                 <CardContent sx={{ 
@@ -163,14 +163,15 @@ const ServicesOverview = () => {
                       sx={{
                         mt: 2,
                         position: 'absolute',
-                        bottom: '20px',  // Adjusted position
+                        bottom: '20%',
                         left: '50%',
-                        transform: 'translateX(-50%) translateY(20px)',
+                        padding: '15px 30px',
+                        transform: 'translate(-70%, 30%)',
                         transition: 'opacity 0.3s ease, transform 0.3s ease',
                         opacity: 0,  // Start invisible
-                        backgroundColor: 'secondary.main',  // Use theme color
+                        backgroundColor: 'secondary.main',
                         '&:hover': {
-                          backgroundColor: 'secondary.dark',  // Darken on hover
+                          backgroundColor: 'secondary.dark',
                         }
                       }}
                     >

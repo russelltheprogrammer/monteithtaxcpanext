@@ -78,7 +78,7 @@ const ServicesIndustries = () => {
                       component="div" 
                       sx={{ 
                         fontFamily: 'Montserrat',
-                        fontSize: '24px',
+                        fontSize: '26px',
                         fontWeight: 600,
                       }}>
                       {industry.title}
