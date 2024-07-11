@@ -132,19 +132,16 @@ export default function Home() {
   return (
     <div className="home-content-container">
       <div className="home-intro-container">
-        <br/>
         <h1>Welcome to RUSSELL MONTEITH CPA PLLC</h1>
         <h3>
           An <span>EXPERT</span> in <span>TAX & ACCOUNTING</span> and the <span>TECHNOLOGY</span> that drives them.
         </h3>
         <br/>
-        <span>
-          <ConsultationButton variant="contained" size="large" onClick={scrollToContact}>
+      </div>
+      <div className='homepage-consultation-button-container'>
+        <ConsultationButton variant="contained" size="large" onClick={scrollToContact}>
             SCHEDULE A FREE CONSULTATION TODAY
-          </ConsultationButton>
-        </span>
-        <br/>
-        <br/>
+        </ConsultationButton>
       </div>
       <div className="homepage-image-container">
         <div className="homepage-image-wrapper">
