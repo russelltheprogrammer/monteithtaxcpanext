@@ -132,9 +132,9 @@ export default function Home() {
   return (
     <div className="home-content-container">
       <div className="home-intro-container">
-        <h1>Welcome to RUSSELL MONTEITH CPA PLLC</h1>
+        <h1>RUSSELL MONTEITH CPA PLLC</h1>
         <h3>
-          An <span>EXPERT</span> in <span>TAX & ACCOUNTING</span> and the <span>TECHNOLOGY</span> that drives them.
+          AN <span>EXPERT</span> IN <span>TAX & ACCOUNTING</span> AND THE <span>TECHNOLOGY</span> THAT DRIVES THEM.
         </h3>
         <br/>
       </div>
