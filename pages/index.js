@@ -18,18 +18,18 @@ const ConsultationButton = styled(Button)({
   fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
   fontWeight: 'bold',
   '&:hover': {
-    backgroundColor: 'rgb(36, 88, 113)',
+    backgroundColor: 'rgb(26, 78, 103)',
     borderColor: 'rgb(16, 68, 93)',
     boxShadow: 'none',
     padding: '20px 100px',
   },
   '&:active': {
     boxShadow: 'none',
-    backgroundColor: 'rgb(36, 88, 113)',
-    borderColor: 'rgb(16, 68, 93)',
+    backgroundColor: 'rgb(16, 68, 93)',
+    borderColor: 'rgb(6, 58, 83)',
   },
   '&:focus': {
-    boxShadow: '0 0 0 0.2rem rgba(93, 146, 171)',
+    boxShadow: '0 0 0 0.2rem rgba(93, 146, 171, 0.5)',
   },
   '@media (max-width: 600px)': {
     '&:hover': {
@@ -50,7 +50,7 @@ const ScrollToTopButton = styled(IconButton)({
   backgroundColor: 'rgb(76, 128, 153)',
   color: 'white',
   '&:hover': {
-    backgroundColor: 'rgb(36, 88, 113)',
+    backgroundColor: 'rgb(26, 78, 103)',
   },
 });
 

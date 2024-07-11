@@ -67,8 +67,16 @@ const Contact = (props) => {
 
   if (error) {
     return (
-      <div id="contact-after-submit-error">
+      <div>
+        <div id="contact-after-submit-error">
           There has been an error. Please try again or contact the system administrator.
+        </div>
+        <br/><br/><br/>
+        <ContactInfo />
+        {logoState
+          ? <Image id="homepage-logo-img" src="/homepagelogoimage.png" alt="Home Page Logo" width={780} height={200} /> 
+          : ''}
+        <br/><br/><br/>
       </div>
     );
   }  else if (contactSubmit) {
@@ -200,8 +208,17 @@ const Contact = (props) => {
                   marginTop: '20px',
                   padding: '10px',
                   '&:hover': { 
-                    backgroundColor: '#333333',
-                  }
+                    backgroundColor: '#007bff',
+                  },
+                  '&:active': {
+                    backgroundColor: '#0056b3',
+                  },
+                  '&:disabled': {
+                    backgroundColor: '#b0b0b0', // Light gray for disabled
+                    color: '#ffffff', // Ensure text color is also adjusted for disabled state
+                  },
+                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Subtle shadow for a glossy effect
+                  transition: 'background-color 0.3s ease, box-shadow 0.3s ease', // Smooth transition effect
                 }}
                 fullWidth
               >
