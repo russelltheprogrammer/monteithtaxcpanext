@@ -1,5 +1,6 @@
 import { Box, Button, Card, CardContent, Grid, Typography } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useState } from 'react';
 import BalanceIcon from '@mui/icons-material/Balance';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import CoffeeIcon from '@mui/icons-material/Coffee';
@@ -10,6 +11,7 @@ import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import PolylineIcon from '@mui/icons-material/Polyline';
 import CampaignIcon from '@mui/icons-material/Campaign';
 import AltRouteIcon from '@mui/icons-material/AltRoute';
+import ServicesOverviewItem from '../comps/ServicesOverviewItem';
 
 const interFontFamily = createTheme({
   typography: {
@@ -21,6 +23,18 @@ const interFontFamily = createTheme({
 });
 
 const ServicesOverview = () => {
+  const [open, setOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState({});
+
+  const handleClickOpen = (service) => {
+    setSelectedService(service);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
 
   const iconStyle = {
     mr: 2,
@@ -31,61 +45,73 @@ const ServicesOverview = () => {
     { 
       id: 1, 
       title: 'Tax Services',
-      description: 'Expert tax services', 
+      description: 'Expert tax services for individuals, families, and businesses in compliance with the latest tax laws.',
+      learnMore: true,
+      learnMoreText: `Maximize tax savings and plan for future tax events effectively. Preparation and filing for most tax forms such as 1040 (Individual), 1065 (Partnership), 1120 (Corporation), 
+      1120S (S-Corporation), 1041 (Trust), 709 (Gift Tax), 1099 (Payments), and more. Research into complex tax laws to make sure full compliance is met.`,
       icon: <BalanceIcon sx={iconStyle} />
     },
     { 
       id: 2, 
       title: 'Tax Planning', 
-      description: 'This is the description for the service.', 
+      description: 'This is the description for the service.',
+      learnMore: false,
       icon: <AttachMoneyIcon sx={iconStyle} />
     },
     { 
       id: 3, 
       title: 'Tax Consulting', 
-      description: 'This is the description for the service.', 
+      description: 'This is the description for the service.',
+      learnMore: false,
       icon: <CoffeeIcon sx={iconStyle} />
     },
     { 
       id: 4, 
       title: 'Bookkeeping & Accounting', 
-      description: 'This is the description for the service.', 
+      description: 'This is the description for the service.',
+      learnMore: false,
       icon: <KeyboardIcon sx={iconStyle} />
     },
     { 
       id: 6, 
       title: 'Software Development', 
-      description: 'This is the description for the service.', 
+      description: 'This is the description for the service.',
+      learnMore: false,
       icon: <DeveloperBoardIcon sx={iconStyle} />
     },
     { 
       id: 7, 
       title: 'Product Development', 
-      description: 'This is the description for the service.', 
+      description: 'This is the description for the service.',
+      learnMore: false,
       icon: <ImportantDevicesIcon sx={iconStyle} />
     },
     { 
       id: 8, 
       title: 'Account & Project Management', 
-      description: 'This is the description for the service.', 
+      description: 'This is the description for the service.',
+      learnMore: false,
       icon: <DesignServicesIcon sx={iconStyle} />
     },
     { 
       id: 9, 
       title: 'Automation & Data Analysis', 
-      description: 'This is the description for the service.', 
+      description: 'This is the description for the service.',
+      learnMore: false,
       icon: <PolylineIcon sx={iconStyle} />
     },
     { 
       id: 11, 
       title: 'Business Development', 
-      description: 'This is the description for the service.', 
+      description: 'This is the description for the service.',
+      learnMore: false,
       icon: <CampaignIcon sx={iconStyle} />
     },
     { 
       id: 12, 
       title: 'Other Services', 
-      description: 'This is the description for the service.', 
+      description: 'This is the description for the service.',
+      learnMore: false,
       icon: <AltRouteIcon sx={iconStyle} />
     },
   ];
@@ -100,10 +126,10 @@ const ServicesOverview = () => {
       <div>
         <Grid container spacing={0} sx={{ px: 6, pt: 4, pb: 6 }}>
           {services.map((service) => (
-            <Grid item xs={12} sm={6} md={3} key={service.id}>
+            <Grid item xs={12} sm={12} md={12} lg={3} key={service.id}>
               <Card sx={{ 
                 minWidth: { xs: 220, sm: 250, md: 250, lg: 280 }, 
-                minHeight: 400, 
+                minHeight: 480, 
                 width: '100%', 
                 height: '100%', 
                 display: 'flex', 
@@ -111,6 +137,7 @@ const ServicesOverview = () => {
                 border: 'none',
                 boxShadow: 'none',
                 backgroundColor: '#F3F7F9',
+                cursor: service.learnMore ? 'pointer' : 'default',
                 '&:hover': {
                   '& .learnMoreBtn': {
                     opacity: 1,  // Make button fully visible on hover
@@ -160,6 +187,7 @@ const ServicesOverview = () => {
                     <Button
                       variant="contained"
                       className="learnMoreBtn"
+                      onClick={() => handleClickOpen(service)}
                       sx={{
                         mt: 2,
                         position: 'absolute',
@@ -177,6 +205,13 @@ const ServicesOverview = () => {
                     >
                         Learn More
                     </Button>
+                    {selectedService && (
+                      <ServicesOverviewItem
+                        open={open}
+                        service={selectedService}
+                        onClose={handleClose}
+                      />
+                    )}
                   </Box>
                 </CardContent>
               </Card>
