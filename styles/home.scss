@@ -16,7 +16,7 @@
   }
   
   .home-intro-container {
-    padding: 200px 0;
+    padding: 260px 0;
     font-family: "Montserrat";
     color: white;
     box-sizing: border-box;
@@ -26,9 +26,27 @@
     background-repeat: no-repeat;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 1536px) {
     .home-intro-container {
       padding: 240px 0;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .home-intro-container {
+      padding: 220px 0;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .home-intro-container {
+      padding: 160px 20px 240px 20px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .home-intro-container {
+      padding: 100px 10px 240px 10px;
     }
   }
   
@@ -39,6 +57,19 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     animation: fadeInDown 1s ease-in-out;
     padding-bottom: 10px;
+  }
+
+  @media (max-width: 900px) {
+    .home-intro-container h1 {
+      padding-bottom: 20px;
+      font-size: 50px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .home-intro-container h1 {
+      padding-bottom: 30px;
+    }
   }
   
   .home-intro-container h3 {

@@ -32,8 +32,9 @@ const ConsultationButton = styled(Button)({
     boxShadow: '0 0 0 0.2rem rgba(93, 146, 171, 0.5)',
   },
   '@media (max-width: 600px)': {
+    padding: '20px 30px',
     '&:hover': {
-      padding: '20px 60px',
+      padding: '20px 30px',
     }
   }
 });
@@ -134,7 +135,7 @@ export default function Home() {
       <div className="home-intro-container">
         <h1>RUSSELL MONTEITH CPA PLLC</h1>
         <h3>
-          AN <span>EXPERT</span> IN <span>TAX & ACCOUNTING</span> AND THE <span>TECHNOLOGY</span> THAT DRIVES THEM.
+          AN <span>EXPERT</span> IN <span>TAX & ACCOUNTING</span> AND THE <span>TECHNOLOGY</span> THAT DRIVES IT
         </h3>
         <br/>
       </div>
