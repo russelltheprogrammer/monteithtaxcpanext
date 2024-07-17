@@ -1,5 +1,15 @@
 import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Button, Backdrop } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CloseIcon from '@mui/icons-material/Close';
+
+const interFontFamily = createTheme({
+  typography: {
+    fontFamily: [
+      'Inter',
+      'sans-serif'
+    ].join(','),
+  },
+});
 
 const ServicesOverviewItem = ({ open, onClose, service }) => {
   return (
@@ -11,12 +21,12 @@ const ServicesOverviewItem = ({ open, onClose, service }) => {
       maxWidth="md"  // Control the maximum width. Change to 'lg' or 'xl' for larger sizes
       PaperProps={{
         sx: {
-          width: '90%',
-          maxHeight: '90vh',  // Maximum height
+          width: { xs: '90%', md: '80%' },
+          maxHeight: {xs: '94vh', sm: '90vh'},
           boxShadow: '0px 3px 15px rgba(0,0,0,0.2)',
           border: '3px solid black',
           borderRadius: '5%',
-          padding: '20px',
+          padding: {xs: '10px', sm: '20px'},
           backgroundColor: 'white',
           zIndex: (theme) => theme.zIndex.drawer + 1
         }
@@ -33,23 +43,37 @@ const ServicesOverviewItem = ({ open, onClose, service }) => {
         }
       }}
     >
-      <DialogTitle sx={{ fontSize: '34px', fontWeight: 'bold' }}>
-        {service.title}
-      </DialogTitle>
-      <DialogContent>
-        <DialogContentText sx={{ fontSize: '20px' }}>
-          {service.description} {service.learnMoreText}
-        </DialogContentText>
-      </DialogContent>
+      <ThemeProvider theme={interFontFamily}>
+        <DialogTitle 
+          sx={{ 
+            fontSize: { xs: '24px', sm: '34px'}, 
+            fontWeight: 'bold', 
+            paddingBottom: { xs: '20px', sm: '30px' }
+          }}>
+          {service.icon} {service.title}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText 
+            sx={{ 
+              fontSize: {xs: '19px', sm: '20px'}, 
+              width: {xs: '98%', md: '80%', xl: '70%'}, 
+              textAlign: 'left', 
+              margin: 'auto',
+              lineHeight: {xs: '1.7', sm: '1.8'}, 
+            }}>
+            {service.description} {service.learnMoreText}
+          </DialogContentText>
+        </DialogContent>
+      </ThemeProvider>
       <DialogActions>
         <Button
           onClick={onClose}
           sx={{
-            fontSize: '30px',
+            fontSize: {xs: '28px', sm: '30px'},
             minWidth: '160px',
           }}
         >
-          <CloseIcon sx={{ fontSize: '30px' }} />
+          <CloseIcon sx={{ fontSize: {xs: '28px', sm: '30px'} }} />
         Close
         </Button>
       </DialogActions>

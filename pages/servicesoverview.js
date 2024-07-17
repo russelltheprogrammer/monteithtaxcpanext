@@ -54,21 +54,21 @@ const ServicesOverview = () => {
     { 
       id: 2, 
       title: 'Tax Planning', 
-      description: 'This is the description for the service.',
+      description: 'Plan ahead for future tax events effectively to maximize tax savings.',
       learnMore: false,
       icon: <AttachMoneyIcon sx={iconStyle} />
     },
     { 
       id: 3, 
       title: 'Tax Consulting', 
-      description: 'This is the description for the service.',
+      description: 'Special projects and consulting services for tax-related matters, including contracting based work.',
       learnMore: false,
       icon: <CoffeeIcon sx={iconStyle} />
     },
     { 
       id: 4, 
       title: 'Bookkeeping & Accounting', 
-      description: 'This is the description for the service.',
+      description: 'Meet your financial reporting needs with accurate and timely bookkeeping and accounting. Including high proficiency in QuickBooks and QBO.',
       learnMore: false,
       icon: <KeyboardIcon sx={iconStyle} />
     },
@@ -76,7 +76,7 @@ const ServicesOverview = () => {
       id: 6, 
       title: 'Software Development', 
       description: 'This is the description for the service.',
-      learnMore: false,
+      learnMore: true,
       icon: <DeveloperBoardIcon sx={iconStyle} />
     },
     { 
@@ -103,14 +103,14 @@ const ServicesOverview = () => {
     { 
       id: 11, 
       title: 'Business Development', 
-      description: 'This is the description for the service.',
+      description: 'Works with you to grow your business and reach your goals with an expert knowledge of the entire accounting industry from tax to software development.',
       learnMore: false,
       icon: <CampaignIcon sx={iconStyle} />
     },
     { 
       id: 12, 
       title: 'Other Services', 
-      description: 'This is the description for the service.',
+      description: 'Service not listed? Contact us to see if we can help.',
       learnMore: false,
       icon: <AltRouteIcon sx={iconStyle} />
     },
@@ -129,7 +129,7 @@ const ServicesOverview = () => {
             <Grid item xs={12} sm={12} md={12} lg={3} key={service.id}>
               <Card sx={{ 
                 minWidth: { xs: 220, sm: 250, md: 250, lg: 280 }, 
-                minHeight: 480, 
+                minHeight: { xs: 520, sm: 480 }, 
                 width: '100%', 
                 height: '100%', 
                 display: 'flex', 
@@ -184,27 +184,29 @@ const ServicesOverview = () => {
                         {service.description}
                       </Typography>
                     </ThemeProvider>
-                    <Button
-                      variant="contained"
-                      className="learnMoreBtn"
-                      onClick={() => handleClickOpen(service)}
-                      sx={{
-                        mt: 2,
-                        position: 'absolute',
-                        bottom: '20%',
-                        left: '50%',
-                        padding: '15px 30px',
-                        transform: 'translate(-70%, 30%)',
-                        transition: 'opacity 0.3s ease, transform 0.3s ease',
-                        opacity: 0,  // Start invisible
-                        backgroundColor: 'secondary.main',
-                        '&:hover': {
-                          backgroundColor: 'secondary.dark',
-                        }
-                      }}
-                    >
-                        Learn More
-                    </Button>
+                    {service.learnMore ? 
+                      <Button
+                        variant="contained"
+                        className="learnMoreBtn"
+                        onClick={() => handleClickOpen(service)}
+                        sx={{
+                          mt: 2,
+                          position: 'absolute',
+                          bottom: { xs: '10%', sm: '20%' },
+                          left: '50%',
+                          padding: { xs: '20px 40px', xl: '20px 40px' },
+                          transform: 'translate(-70%, 30%)',
+                          transition: 'opacity 0.3s ease, transform 0.3s ease',
+                          opacity: 0,  // Start invisible
+                          backgroundColor: 'secondary.main',
+                          '&:hover': {
+                            backgroundColor: 'secondary.dark',
+                          }
+                        }}
+                      >
+                        Learn&nbsp;More
+                      </Button>
+                      : ''}
                     {selectedService && (
                       <ServicesOverviewItem
                         open={open}
