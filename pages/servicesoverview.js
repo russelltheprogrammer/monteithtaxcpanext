@@ -60,8 +60,8 @@ const ServicesOverview = () => {
     },
     { 
       id: 3, 
-      title: 'Tax Consulting', 
-      description: 'Special projects and consulting services for tax-related matters, including contracting based work.',
+      title: 'Tax Consulting & Advisory', 
+      description: 'Special projects, expert knowledge, industry expertise, and consulting services for tax-related matters, including contract based work.',
       learnMore: false,
       icon: <CoffeeIcon sx={iconStyle} />
     },
@@ -75,29 +75,29 @@ const ServicesOverview = () => {
     { 
       id: 6, 
       title: 'Software Development', 
-      description: 'This is the description for the service.',
+      description: 'An accountant that also knows how to code? Yes, it is possible. Let us help you with your software development needs.',
       learnMore: true,
       icon: <DeveloperBoardIcon sx={iconStyle} />
     },
     { 
       id: 7, 
       title: 'Product Development', 
-      description: 'This is the description for the service.',
-      learnMore: false,
+      description: 'Building a new tax or accounting product? Let us help you with the development and launch.',
+      learnMore: true,
       icon: <ImportantDevicesIcon sx={iconStyle} />
     },
     { 
       id: 8, 
       title: 'Account & Project Management', 
-      description: 'This is the description for the service.',
-      learnMore: false,
+      description: 'Overloaded with new work? Let us help you manage your projects and client accounts.',
+      learnMore: true,
       icon: <DesignServicesIcon sx={iconStyle} />
     },
     { 
       id: 9, 
       title: 'Automation & Data Analysis', 
-      description: 'This is the description for the service.',
-      learnMore: false,
+      description: 'Want to take your business to the next level using the latest time and cost savings techniques?',
+      learnMore: true,
       icon: <PolylineIcon sx={iconStyle} />
     },
     { 
@@ -124,12 +124,16 @@ const ServicesOverview = () => {
         {/* <h5 className='container-services-subtitle-two'>Content</h5> */}
       </div>
       <div>
-        <Grid container spacing={0} sx={{ px: 6, pt: 4, pb: 6 }}>
+        <Grid 
+          container 
+          spacing={0} 
+          sx={{ px: {xs: 2, sm: 4, lg: 3, xl: 6 }, pt: 4, pb: 6 }}
+        >
           {services.map((service) => (
             <Grid item xs={12} sm={12} md={12} lg={3} key={service.id}>
               <Card sx={{ 
                 minWidth: { xs: 220, sm: 250, md: 250, lg: 280 }, 
-                minHeight: { xs: 520, sm: 480 }, 
+                minHeight: { xs: 520, sm: 420, md: 380, lg: 520 }, 
                 width: '100%', 
                 height: '100%', 
                 display: 'flex', 
@@ -176,6 +180,7 @@ const ServicesOverview = () => {
                         sx={{
                           py: 2,
                           fontWeight: 500,
+                          pb: {xs: 2, lg: 1},
                         }}
                       >
                         {service.title}

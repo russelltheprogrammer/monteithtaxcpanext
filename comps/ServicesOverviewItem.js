@@ -46,7 +46,7 @@ const ServicesOverviewItem = ({ open, onClose, service }) => {
       <ThemeProvider theme={interFontFamily}>
         <DialogTitle 
           sx={{ 
-            fontSize: { xs: '24px', sm: '34px'}, 
+            fontSize: { xs: '24px', sm: '40px', lg: '48px' }, 
             fontWeight: 'bold', 
             paddingBottom: { xs: '20px', sm: '30px' }
           }}>
@@ -55,11 +55,11 @@ const ServicesOverviewItem = ({ open, onClose, service }) => {
         <DialogContent>
           <DialogContentText 
             sx={{ 
-              fontSize: {xs: '19px', sm: '20px'}, 
+              fontSize: {xs: '19px', sm: '24px', lg: '28px' }, 
               width: {xs: '98%', md: '80%', xl: '70%'}, 
               textAlign: 'left', 
               margin: 'auto',
-              lineHeight: {xs: '1.7', sm: '1.8'}, 
+              lineHeight: '1.8',
             }}>
             {service.description} {service.learnMoreText}
           </DialogContentText>
