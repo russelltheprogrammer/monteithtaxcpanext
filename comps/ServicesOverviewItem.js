@@ -61,7 +61,7 @@ const ServicesOverviewItem = ({ open, onClose, service }) => {
               margin: 'auto',
               lineHeight: '1.8',
             }}>
-            {service.description} {service.learnMoreText}
+            {service.description} {service.learnMoreText} {service.learnMoreLink ? <a href={service.learnMoreLink} target="_blank" rel="noopener noreferrer">{service.learnMoreLinkText}</a> : ''}
           </DialogContentText>
         </DialogContent>
       </ThemeProvider>

@@ -53,64 +53,82 @@ const ServicesOverview = () => {
     },
     { 
       id: 2, 
+      title: 'Software Development', 
+      description: 'An accountant that also knows how to code? Yes, it is possible. Let me help you with your software engineering and web development needs.',
+      learnMore: true,
+      learnMoreText: `I am skilled in many areas of software development including front-end, back-end, and full-stack development. I have experience with many programming languages and 
+      frameworks such as JavaScript, Typescript, Python, Robotic Process Automation, APIs, HTML, CSS, jQuery, Redux, MongoDB, Mongoose, Express.js, Node.js, React, Next.js, Auth0, Git, 
+      Google Analytics, Tailwind CSS, Shadcn, ChatGPT, and more. I can help you with your website, web applications, or technology/software product. I have coded for startup companies,
+      accounting technology companies, and freelance projects for private clients. Check out my github for more information by clicking this `,
+      learnMoreLink: 'https://github.com/russelltheprogrammer',
+      learnMoreLinkText: 'LINK.',
+      icon: <DeveloperBoardIcon sx={iconStyle} />
+    },
+    { 
+      id: 3, 
+      title: 'Automation & Data Analysis', 
+      description: 'Want to take your business to the next level by using the latest time and cost savings technologies and techniques?',
+      learnMore: true,
+      learnMoreText: `If you clicked "Learn More" then I hope that answer is YES! I have experience working with Robotic Process Automation (RPA), API integrations, and data analysis. 
+      I have partnerships with some of the best accounting technology companies in the industry that specialize in these areas. Let me help you take your business to the next level by
+      automating your repetitive tasks to save you time and by cleansing your dirty data so that you can make better business decisions.`,
+      icon: <PolylineIcon sx={iconStyle} />
+    },
+    { 
+      id: 4, 
+      title: 'Product Development', 
+      description: 'Building a new tax or accounting product? Let me help you with product design and development.',
+      learnMore: true,
+      learnMoreText: `I have experience working with accounting technology companies and startups to build new products. I can help you with product design, development, and management. I have worked on
+      some of the most cutting edge technologies in the accounting industry from Robotic Process Automation to Artificial Intelligence to APIs to old school tax software. I keep up to date with all
+      the types of software in the accounting industry from software that is decades old to software that has just entered the market. Check out my own software that I built in my spare time to 
+      help my clients estimate their quarterly and year-end taxes at`,
+      learnMoreLink: 'https://taxprojection.com',
+      learnMoreLinkText: 'TaxProjection.com.',
+      icon: <ImportantDevicesIcon sx={iconStyle} />
+    },
+    { 
+      id: 6, 
+      title: 'Account & Project Management', 
+      description: 'Overloaded with new work? Let me help you manage your projects and client accounts.',
+      learnMore: true,
+      learnMoreText: `I have worked in the client services industry for over a decade. I have polished my communication and soft skills to deliver the best possible service to my clients. I have
+      worked through numerous tax seasons and have managed extreme workloads and stress while never missing a deadline. Let me help you manage your projects and client accounts so you can free up
+      time to focus on other areas of your business. I have experience working with a few different workflow management systems, one example being Clickup.`,
+      icon: <DesignServicesIcon sx={iconStyle} />
+    },
+    { 
+      id: 7, 
       title: 'Tax Planning', 
       description: 'Plan ahead for future tax events effectively to maximize tax savings.',
       learnMore: false,
       icon: <AttachMoneyIcon sx={iconStyle} />
     },
     { 
-      id: 3, 
+      id: 8, 
       title: 'Tax Consulting & Advisory', 
-      description: 'Special projects, expert knowledge, industry expertise, and consulting services for tax-related matters, including contract based work.',
+      description: 'Special projects, expert knowledge, industry specialization, and consulting services for tax-related matters, including contract based work.',
       learnMore: false,
       icon: <CoffeeIcon sx={iconStyle} />
     },
     { 
-      id: 4, 
+      id: 9, 
       title: 'Bookkeeping & Accounting', 
       description: 'Meet your financial reporting needs with accurate and timely bookkeeping and accounting. Including high proficiency in QuickBooks and QBO.',
       learnMore: false,
       icon: <KeyboardIcon sx={iconStyle} />
     },
     { 
-      id: 6, 
-      title: 'Software Development', 
-      description: 'An accountant that also knows how to code? Yes, it is possible. Let us help you with your software development needs.',
-      learnMore: true,
-      icon: <DeveloperBoardIcon sx={iconStyle} />
-    },
-    { 
-      id: 7, 
-      title: 'Product Development', 
-      description: 'Building a new tax or accounting product? Let us help you with the development and launch.',
-      learnMore: true,
-      icon: <ImportantDevicesIcon sx={iconStyle} />
-    },
-    { 
-      id: 8, 
-      title: 'Account & Project Management', 
-      description: 'Overloaded with new work? Let us help you manage your projects and client accounts.',
-      learnMore: true,
-      icon: <DesignServicesIcon sx={iconStyle} />
-    },
-    { 
-      id: 9, 
-      title: 'Automation & Data Analysis', 
-      description: 'Want to take your business to the next level using the latest time and cost savings techniques?',
-      learnMore: true,
-      icon: <PolylineIcon sx={iconStyle} />
-    },
-    { 
       id: 11, 
       title: 'Business Development', 
-      description: 'Works with you to grow your business and reach your goals with an expert knowledge of the entire accounting industry from tax to software development.',
+      description: 'I will work with you to grow your business and reach your goals with my expert knowledge of the entire accounting industry from tax to accounting to technology.',
       learnMore: false,
       icon: <CampaignIcon sx={iconStyle} />
     },
     { 
       id: 12, 
       title: 'Other Services', 
-      description: 'Service not listed? Contact us to see if we can help.',
+      description: 'Service not listed? Contact me to see if I can help.',
       learnMore: false,
       icon: <AltRouteIcon sx={iconStyle} />
     },
