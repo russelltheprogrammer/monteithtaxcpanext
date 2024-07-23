@@ -48,7 +48,7 @@ const ServicesOverview = () => {
       description: 'Expert tax services for individuals, families, and businesses in compliance with the latest tax laws.',
       learnMore: true,
       learnMoreText: `Maximize tax savings and plan for future tax events effectively. Preparation and filing for most tax forms such as 1040 (Individual), 1065 (Partnership), 1120 (Corporation), 
-      1120S (S-Corporation), 1041 (Trust), 709 (Gift Tax), 1099 (Payments), and more. Research into complex tax laws to make sure full compliance is met.`,
+      1120S (S-Corporation), 1041 (Trust), 709 (Gift Tax), 1099 (Payments), and more. I have experience in many different industries which can be viewed in the Industries section of the website.`,
       icon: <BalanceIcon sx={iconStyle} />
     },
     { 
@@ -79,10 +79,10 @@ const ServicesOverview = () => {
       title: 'Product Development', 
       description: 'Building a new tax or accounting product? Let me help you with product design and development.',
       learnMore: true,
-      learnMoreText: `I have experience working with accounting technology companies and startups to build new products. I can help you with product design, development, and management. I have worked on
-      some of the most cutting edge technologies in the accounting industry from Robotic Process Automation to Artificial Intelligence to APIs to old school tax software. I keep up to date with all
-      the types of software in the accounting industry from software that is decades old to software that has just entered the market. Check out my own software that I built in my spare time to 
-      help my clients estimate their quarterly and year-end taxes at`,
+      learnMoreText: `I have experience working with accounting technology companies and startups to build new products. I have worked on some of the most cutting edge technologies in 
+      the accounting industry from Robotic Process Automation to Artificial Intelligence to APIs to old school tax software. I keep up to date with all
+      the software in the accounting industry from software that is decades old to software that has just entered the marketplace. Check out my own software that I built in 
+      my spare time to help my clients estimate their quarterly and year-end taxes at`,
       learnMoreLink: 'https://taxprojection.com',
       learnMoreLinkText: 'TaxProjection.com.',
       icon: <ImportantDevicesIcon sx={iconStyle} />
@@ -93,15 +93,17 @@ const ServicesOverview = () => {
       description: 'Overloaded with new work? Let me help you manage your projects and client accounts.',
       learnMore: true,
       learnMoreText: `I have worked in the client services industry for over a decade. I have polished my communication and soft skills to deliver the best possible service to my clients. I have
-      worked through numerous tax seasons and have managed extreme workloads and stress while never missing a deadline. Let me help you manage your projects and client accounts so you can free up
+      worked through numerous tax seasons and have managed extreme workloads and stress while never missing a deadline. Let me help you free up
       time to focus on other areas of your business. I have experience working with a few different workflow management systems, one example being Clickup.`,
       icon: <DesignServicesIcon sx={iconStyle} />
     },
     { 
       id: 7, 
       title: 'Tax Planning', 
-      description: 'Plan ahead for future tax events effectively to maximize tax savings.',
-      learnMore: false,
+      description: 'Plan ahead for future tax events to effectively maximize your tax savings.',
+      learnMore: true,
+      learnMoreText: `Whether it be business structuring, retirement planning, equity compensation, estate planning, multi-state tax planning, living in a foreign country, or another related
+      tax matter, I can help you plan ahead for it. I have experience working with many different types of clients, lets save you some money!`,
       icon: <AttachMoneyIcon sx={iconStyle} />
     },
     { 
@@ -139,7 +141,6 @@ const ServicesOverview = () => {
       <div className="topic-header" id="topic-header-services">
         <h1>SERVICES OVERVIEW</h1>
         <h3 className='container-services-subtitle'>How Can Russell Help You?</h3>
-        {/* <h5 className='container-services-subtitle-two'>Content</h5> */}
       </div>
       <div>
         <Grid 
