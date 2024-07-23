@@ -30,60 +30,6 @@ body, html {
   padding-top: 20px;
 }
 
-.section-container {
-  height: 100vh;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.container-resources {
-  padding-top: 25px;
-  text-align: center;
-  font-size: 18px;
-  border-width: 3px;
-  border-color: black;
-  border-style: solid;
-  box-shadow: 10px 7.5px 5px black;
-  background: #f8f8f8;
-  margin: 0 auto;
-  width: 50%;
-  padding-right: 10%;
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .container-resources {
-    width: 70%;
-  }
-}
-
-@media (max-width: 768px) {
-  .container-resources {
-    width: 90%;
-  }
-}
-
-.container-resources > ul {
-  list-style-type: "👉";
-  padding: 0;
-  text-align: left;
-  display: inline-block;
-  margin-left: 40%;
-  margin-right: 10%;
-  text-indent: 0.5%;
-}
-
-@media (max-width: 480px) {
-  .container-resources > ul {
-    margin-left: 20%;
-    margin-right: 5%;
-    text-indent: 0.5%;
-  }
-}
-
-.container-resources li {
-  margin-bottom: 20px;
-}
-
 .container-notfound {
   padding-top: 15%;
   min-height: 100vh;
