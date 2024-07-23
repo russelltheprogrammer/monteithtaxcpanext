@@ -217,8 +217,8 @@ const Contact = (props) => {
                     backgroundColor: '#b0b0b0', // Light gray for disabled
                     color: '#ffffff', // Ensure text color is also adjusted for disabled state
                   },
-                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Subtle shadow for a glossy effect
-                  transition: 'background-color 0.3s ease, box-shadow 0.3s ease', // Smooth transition effect
+                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+                  transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
                 }}
                 fullWidth
               >

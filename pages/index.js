@@ -79,7 +79,7 @@ export default function Home() {
 
   useEffect(() => {
     checkScreenSize(); // Check on initial mount
-    window.addEventListener('resize', checkScreenSize); // Check on resize
+    window.addEventListener('resize', checkScreenSize);
     return () => {
       window.removeEventListener('resize', checkScreenSize);
     };
@@ -115,7 +115,7 @@ export default function Home() {
     };
 
     const observer = new IntersectionObserver(observerCallback, {
-      threshold: 0.5, // Adjust as needed
+      threshold: 0.5,
     });
 
     const currentRef = imageWrapperRef.current;
