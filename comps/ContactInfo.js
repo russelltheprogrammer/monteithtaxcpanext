@@ -1,19 +1,26 @@
+import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
+import EmailIcon from '@mui/icons-material/Email';
+
 const ContactInfo = () => {
 
-const username = "info";
-const hostname = "monteithtaxcpa.com";
-const firstnum = "347-50";
-const secondnum = "8-3407";
+  const email = 'info@monteithtaxcpa.com';
+  const phone = '347-508-3407';
 
-    return ( 
-        <div id="container-contact-info" className="row-4 align-self-center">
-            <h2 id="contact-info-title">Contact Info</h2>
-                <p><i className="fas fa-envelope"></i>&nbsp;&nbsp;<a href={`mailto:${username}@${hostname}`}>{username}@{hostname}</a>
-                <br/>
-                <i className="fas fa-phone"></i>&nbsp;&nbsp;<a href={`tel:${firstnum}${secondnum}`}>{firstnum}{secondnum}</a>
-                </p>
+  return ( 
+    <div className='contact-info-container'>
+      <div className='contact-info-wrapper'>
+        <h2 className="contact-info-title">Contact Information</h2>
+        <div className='contact-info-items-container'>
+          <div className='contact-info-item'>
+            <EmailIcon style={{ fontSize: '32px', alignItems: 'center', justifyContent: 'center' }} />&nbsp;&nbsp;<a href={`mailto:${email}`}>{email}</a>
+          </div>
+          <div className='contact-info-item'>
+            <PhoneEnabledIcon style={{ fontSize: '32px', alignItems: 'center', justifyContent: 'center' }} />&nbsp;&nbsp;<a href={`tel:${phone}`}>{phone}</a>
+          </div>
         </div>
-     );
+      </div>
+    </div>
+  );
 }
  
 export default ContactInfo;

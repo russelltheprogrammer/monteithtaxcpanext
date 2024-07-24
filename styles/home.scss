@@ -1,0 +1,190 @@
+.home-content-container {
+    background-color: white;
+    padding-bottom: 5%;
+  }
+  
+  @media (max-width: 1200px) {
+    .home-content-container {
+      padding-bottom: 10%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .home-content-container {
+      padding-bottom: 15%;
+    }
+  }
+  
+  .home-intro-container {
+    padding: 260px 0;
+    font-family: "Montserrat";
+    color: white;
+    box-sizing: border-box;
+    background-image: url('/lightdesertimage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: 1536px) {
+    .home-intro-container {
+      padding: 240px 0;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .home-intro-container {
+      padding: 220px 0;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .home-intro-container {
+      padding: 160px 20px 240px 20px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .home-intro-container {
+      padding: 100px 10px 240px 10px;
+    }
+  }
+  
+  .home-intro-container h1 {
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease-in-out;
+    padding-bottom: 10px;
+  }
+
+  @media (max-width: 900px) {
+    .home-intro-container h1 {
+      padding-bottom: 20px;
+      font-size: 50px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .home-intro-container h1 {
+      padding-bottom: 30px;
+    }
+  }
+  
+  .home-intro-container h3 {
+    font-size: 20px;
+    animation: fadeInUp 1s ease-in-out;
+    font-family: "Montserrat";
+    letter-spacing: 1px;
+    font-style: italic;
+  }
+
+  .home-intro-container h3 span {
+    font-weight: 800;
+    font-size: 28px;
+  }
+
+  .homepage-consultation-button-container {
+   padding: 40px 0;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .homepage-image-container {
+    width: 100%;
+    overflow: hidden; /* Ensures no unexpected overflow */
+  }
+  
+  .homepage-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 37.5%; /* Aspect ratio (height/width * 100%) = 300/800 * 100% */
+    border: 4px solid black;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  #homepage-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 900px) {
+    .homepage-image-wrapper {
+      padding-top: 50%; /* Adjusted aspect ratio for smaller screens */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .homepage-image-wrapper {
+      padding-top: 100%; /* Adjusted aspect ratio for smaller screens */
+    }
+  }
+  
+  #homepage-logo-img {
+    max-width: 50%;
+    height: auto;
+    width: auto;
+    padding-bottom: 2%;
+  }
+  
+  @media (min-width: 481px) and (max-width: 1024px) {
+    #homepage-logo-img {
+      max-width: 75%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #homepage-logo-img {
+      max-width: 90%;
+    }
+  }
+  
+  @keyframes fadeInAndMove {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Define a class that will trigger the animation */
+  .logo-image-animation {
+    animation: fadeInAndMove 1s ease-out forwards;
+  }

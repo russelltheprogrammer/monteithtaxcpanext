@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+.container-about {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #F3F7F9;
+    margin-bottom: 30px; // Needs to matching padding in .footer-container-wrapper in /footer.scss
+}
+
+.wrapper-about {
+    display: flex;
+    flex-direction: row;
+    padding: 0 5%;
+    line-height: 1.3;
+  }
+
+@media (max-width: 1536px) and (min-width: 1201px) {
+  .wrapper-about {
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 900px) {
+  .wrapper-about {
+    padding: 0 2%;
+  }
+}
+
+@media (max-width: 900px) {
+  .wrapper-about {
+    flex-direction: column;
+    padding: 5%;
+  }
+}
+  
+.container-about-picture {
+  display: flex;
+  width: 30%;
+  align-items: center;
+}
+  
+@media (max-width: 900px) {
+  .container-about-picture {
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 7%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-about-picture {
+    width: 100%;
+    justify-content: center;
+    padding: 10% 0;
+  }
+}
+
+.container-about-content {
+  width: 70%;
+}
+
+@media (max-width: 1536px) and (min-width: 900px) {
+  .container-about-content {
+    width: 80%;
+    padding-left: 5%;
+  }
+}
+
+@media (max-width: 900px) {
+  .container-about-content {
+    width: 100%;
+  }
+}
+
+.container-about-content-main-title {
+  text-align: left;
+}
+
+.container-about-content-name-title {
+  text-align: left;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-content {
+  text-align: left;
+  padding: 2% 0;
+  font-size: 20px;
+  font-family: "EB Garamond", serif;
+}
+
+#about-picture {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  border: 3.5px solid black;
+  border-radius: 5%;
+}

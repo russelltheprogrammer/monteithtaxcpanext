@@ -1,0 +1,44 @@
+#topic-header-services {
+ padding-left: 2%;
+ padding-right: 2%;
+}
+
+@media (max-width: 900px) {
+  #topic-header-services h1 {
+    font-size: 40px;
+  }
+}
+
+.container-services {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 30px; // Needs to matching padding in .footer-container-wrapper in /footer.scss
+    padding-bottom: 10px;
+    background-color: #F3F7F9;
+  }
+
+.container-services-subtitle {
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+
+  @media (max-width: 900px) {
+    .container-services-subtitle {
+      font-size: 26px;
+    }
+  }
+
+  .container-services-subtitle-two {
+    padding: 10px 10px 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 900px) {
+    .container-services-subtitle-two {
+      font-size: 20px;
+    }
+  }
