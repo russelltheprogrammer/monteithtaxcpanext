@@ -23,7 +23,7 @@ const ServicesIndustries = () => {
     { id: 3, title: 'Technology & Startups', icon: <DeviceHubIcon sx={iconStyle} />},
     { id: 4, title: 'Foreign Including Expatriates', icon: <PublicIcon sx={iconStyle} />},
     { id: 5, title: 'Small Businesses', icon: <BusinessIcon sx={iconStyle} />},
-    { id: 6, title: 'Contractors & Freelancers', icon: <BusinessCenterIcon sx={iconStyle} />},
+    { id: 6, title: 'Consultants & Freelancers', icon: <BusinessCenterIcon sx={iconStyle} />},
     { id: 7, title: 'Real Estate', icon: <HomeWorkIcon sx={iconStyle} />},
     { id: 8, title: 'Tax Software, Automation, Data', icon: <ComputerIcon sx={iconStyle} />},
   ];
