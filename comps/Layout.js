@@ -9,8 +9,8 @@ const Layout = ({ children }) => {
         <title>Russell Monteith CPA | Tax & Technology</title>
         <meta
           name="description"
-          content="Virtual based tax accountant and technology professional that provides tax and technology solutions and services for individuals and businesses. 
-                Offers free consultations."
+          content="Virtual tax accountant and technology professional providing tax, technology, consulting, and contracting services for 
+            individuals and businesses. Offers free consultations."
           key="desc"
         />
       </Head>
