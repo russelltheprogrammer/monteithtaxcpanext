@@ -56,7 +56,7 @@ const ServicesOverviewItem = ({ open, onClose, service }) => {
           <DialogContentText 
             sx={{ 
               fontSize: {xs: '19px', sm: '24px', lg: '28px' }, 
-              width: {xs: '98%', md: '80%', xl: '70%'}, 
+              width: {xs: '94%', md: '80%', xl: '70%'}, 
               textAlign: 'left', 
               margin: 'auto',
               lineHeight: '1.8',
