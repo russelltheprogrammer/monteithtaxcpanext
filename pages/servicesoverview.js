@@ -12,6 +12,7 @@ import PolylineIcon from '@mui/icons-material/Polyline';
 import CampaignIcon from '@mui/icons-material/Campaign';
 import AltRouteIcon from '@mui/icons-material/AltRoute';
 import ServicesOverviewItem from '../comps/ServicesOverviewItem';
+import AssessmentIcon from '@mui/icons-material/Assessment';
 
 const interFontFamily = createTheme({
   typography: {
@@ -76,6 +77,16 @@ const ServicesOverview = () => {
     },
     { 
       id: 4, 
+      title: 'Accounting & Tax Technology Stack Consulting', 
+      description: 'Starting a new company or need help evaluating your current technology stack?',
+      learnMore: true,
+      learnMoreText: `The accounting and tax technology industry is constantly changing and evolving. Does your tech stack need improvement? Modernization? Are you just starting out 
+      and anxioux about what software to choose? Do you want an independent evaluation to make sure you aren't just getting upsold by tech vendors? I can help you with all of these 
+      questions, concerns, and more. I work full time in the accounting technology space and I constantly develop, research, and use the latest technologies.`,
+      icon: <AssessmentIcon sx={iconStyle} />
+    },
+    { 
+      id: 6, 
       title: 'Product Development', 
       description: 'Building a new tax or accounting product? Let me help you with product design and development.',
       learnMore: true,
@@ -88,7 +99,7 @@ const ServicesOverview = () => {
       icon: <ImportantDevicesIcon sx={iconStyle} />
     },
     { 
-      id: 6, 
+      id: 7, 
       title: 'Account & Project Management', 
       description: 'Overloaded with new work? Let me help you manage your projects and client accounts.',
       learnMore: true,
@@ -98,7 +109,7 @@ const ServicesOverview = () => {
       icon: <DesignServicesIcon sx={iconStyle} />
     },
     { 
-      id: 7, 
+      id: 8, 
       title: 'Tax Planning', 
       description: 'Plan ahead for future tax events to effectively maximize your tax savings.',
       learnMore: true,
@@ -107,28 +118,28 @@ const ServicesOverview = () => {
       icon: <AttachMoneyIcon sx={iconStyle} />
     },
     { 
-      id: 8, 
+      id: 9, 
       title: 'Tax Consulting & Advisory', 
       description: 'Special projects, expert knowledge, industry specialization, and consulting services for tax-related matters, including contract based work.',
       learnMore: false,
       icon: <CoffeeIcon sx={iconStyle} />
     },
     { 
-      id: 9, 
+      id: 11, 
       title: 'Bookkeeping & Accounting', 
       description: 'Meet your financial reporting needs with accurate and timely bookkeeping and accounting. Including high proficiency in QuickBooks and QBO.',
       learnMore: false,
       icon: <KeyboardIcon sx={iconStyle} />
     },
     { 
-      id: 11, 
+      id: 12, 
       title: 'Business Development', 
       description: 'I will work with you to grow your business and reach your goals with my expert knowledge of the entire accounting industry from tax to accounting to technology.',
       learnMore: false,
       icon: <CampaignIcon sx={iconStyle} />
     },
     { 
-      id: 12, 
+      id: 13, 
       title: 'Other Services', 
       description: 'Service not listed? Contact me to see if I can help.',
       learnMore: false,
