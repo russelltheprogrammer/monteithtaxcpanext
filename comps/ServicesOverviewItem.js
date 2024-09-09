@@ -22,9 +22,8 @@ const ServicesOverviewItem = ({ open, onClose, service }) => {
       PaperProps={{
         sx: {
           width: { xs: '90%', md: '80%' },
-          maxHeight: {xs: '94vh', sm: '90vh'},
+          maxHeight: {xs: '110vh', sm: '90vh'},
           boxShadow: '0px 3px 15px rgba(0,0,0,0.2)',
-          overflow: 'auto',
           border: '3px solid black',
           borderRadius: '5%',
           padding: {xs: '10px', sm: '20px'},
