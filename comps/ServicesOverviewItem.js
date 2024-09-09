@@ -16,8 +16,6 @@ const ServicesOverviewItem = ({ open, onClose, service }) => {
     <Dialog
       open={open}
       onClose={onClose}
-      aria-labelledby="service-dialog-title"
-      aria-describedby="service-dialog-description"
       fullScreen={true}
       fullWidth
       maxWidth="md"  // Control the maximum width. Change to 'lg' or 'xl' for larger sizes
@@ -47,7 +45,6 @@ const ServicesOverviewItem = ({ open, onClose, service }) => {
     >
       <ThemeProvider theme={interFontFamily}>
         <DialogTitle
-          id="service-dialog-title" 
           sx={{ 
             fontSize: { xs: '24px', sm: '40px', lg: '48px' }, 
             fontWeight: 'bold', 
@@ -55,7 +52,7 @@ const ServicesOverviewItem = ({ open, onClose, service }) => {
           }}>
           {service.icon} {service.title}
         </DialogTitle>
-        <DialogContent id="service-dialog-description">
+        <DialogContent>
           <DialogContentText 
             sx={{ 
               fontSize: {xs: '19px', sm: '24px', lg: '28px' }, 
