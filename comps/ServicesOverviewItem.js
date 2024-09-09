@@ -52,7 +52,7 @@ const ServicesOverviewItem = ({ open, onClose, service }) => {
           }}>
           {service.icon} {service.title}
         </DialogTitle>
-        <DialogContent>
+        <DialogContent sx={{ paddingBottom: '0' }}>
           <DialogContentText 
             sx={{ 
               fontSize: {xs: '19px', sm: '24px', lg: '28px' }, 
