@@ -36,7 +36,7 @@ const About = () => {
             <br/>
             I am a graduate of Binghamton University with a Bachelor of Science in Accounting and a Master of Science in Accounting. I passed the CPA exam while attending
             graduate school full time. I am certified in many different software engineering skills, a member of the AICPA, and always looking to learn more. 
-            In my free time, I enjoy exercising, sports, spending time with family and friends, being outside in nature, anime, video games, and food.
+            In my free time, I enjoy exercising, sports, spending time with family and friends, being outside in nature, anime, board games, and food.
           </p>
         </div>
       </div>
