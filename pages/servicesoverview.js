@@ -67,12 +67,12 @@ const ServicesOverview = () => {
     },
     { 
       id: 3, 
-      title: 'Automation & Data Analysis', 
+      title: 'Automation & Integrations', 
       description: 'Want to take your business to the next level by using the latest time and cost savings technologies and techniques?',
       learnMore: true,
-      learnMoreText: `If you clicked "Learn More" then I hope that answer is YES! I have experience working with Robotic Process Automation (RPA), API integrations, and data analysis. 
-      I have partnerships with some of the best accounting technology companies in the industry that specialize in these areas. Let me help you take your business to the next level by
-      automating your repetitive tasks to save you time and by cleansing your dirty data so that you can make better business decisions.`,
+      learnMoreText: `If you clicked "Learn More" then I hope that answer is YES! I have experience working with custom developed Python robots, Robotic Process Automation (RPA), and 
+      API integrations. I have partnerships with some of the best accounting technology companies in the industry that specialize in these areas. 
+      Let me help you take your business to the next level by automating your repetitive tasks to save you time so that you can focus on other, more value added areas of your business.`,
       icon: <PolylineIcon sx={iconStyle} />
     },
     { 
