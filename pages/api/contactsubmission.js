@@ -30,10 +30,10 @@ export default function handler(req, res) {
     }
   });
 
-  const firstname = req.body.firstname;
-  const lastname = req.body.lastname;
+  const firstname = req.body.firstName;
+  const lastname = req.body.lastName;
   const email = req.body.email;
-  const phonenumber = req.body.phonenumber;
+  const phonenumber = req.body.phoneNumber;
   const subject = req.body.subject;
   const message = req.body.message;
   const mail = {
