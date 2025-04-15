@@ -23,8 +23,8 @@ const About = () => {
             <br/>
             <br/>
             Unlike most accountants, I focus on the technology side. I have always had an interest in technology from a young age but I really discovered
-            my calling for programming and other areas of tech during the pandemic when I deciced to learn what software engineering was really about from coding, 
-            to development, to design, to deployment. 
+            my calling for programming and other areas of tech during the pandemic when I deciced to learn what software engineering was really about from 
+            programming to development, to design, to deployment. 
             I treat each client&apos;s business and tax situation as unique and thrive to deliver the utmost care and value as if it was my own.
             <br/>
             <br/>
@@ -35,7 +35,7 @@ const About = () => {
             <br/>
             <br/>
             I am a graduate of Binghamton University with a Bachelor of Science in Accounting and a Master of Science in Accounting. I passed the CPA exam while attending
-            graduate school full time. I am certified in many different software engineering skills, a member of the AICPA, and always looking to learn more. 
+            graduate school full time. I am certified in many different software engineering skills, a member of the AICPA, a member of the NYSSCPA, and always looking to learn more. 
             In my free time, I enjoy exercising, sports, spending time with family and friends, being outside in nature, anime, board games, and food.
           </p>
         </div>
