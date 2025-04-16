@@ -24,13 +24,13 @@ const About = () => {
             <br/>
             Unlike most accountants, I focus on the technology side. I have always had an interest in technology from a young age but I really discovered
             my calling for programming and other areas of tech during the pandemic when I deciced to learn what software engineering was really about from 
-            programming to development, to design, to deployment. 
+            programming, to development, to design, to deployment. 
             I treat each client&apos;s business and tax situation as unique and thrive to deliver the utmost care and value as if it was my own.
             <br/>
             <br/>
             I currently consult and contract with accounting technology businesses, startup companies, and accounting firms to help them with their business needs,
             such as software development, product development, account management, business development, custom solutions, project management, and other general 
-            consulting. I am always looking to help businesses grow and improve their processes. In addition, I still offer traditional tax services to individuals and
+            consulting. I am always looking to help businesses grow and improve their processes. In addition, I offer traditional tax services to individuals and
             businesses.
             <br/>
             <br/>
