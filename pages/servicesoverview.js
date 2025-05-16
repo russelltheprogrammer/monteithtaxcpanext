@@ -77,7 +77,7 @@ const ServicesOverview = () => {
     },
     { 
       id: 4, 
-      title: 'Accounting & Tax Technology Stack Consulting', 
+      title: 'Accounting & Tax Technology Consulting', 
       description: 'Starting a new company or need help evaluating your current technology stack?',
       learnMore: true,
       learnMoreText: `The accounting and tax technology industry is constantly changing and evolving. Does your tech stack need improvement? Modernization? Are you just starting out 
@@ -100,7 +100,7 @@ const ServicesOverview = () => {
     },
     { 
       id: 7, 
-      title: 'Account & Project Management', 
+      title: 'Account Services & Project Management', 
       description: 'Overloaded with new work? Let me help you manage your projects and client accounts.',
       learnMore: true,
       learnMoreText: `I have worked in the client services industry for over a decade. I have polished my communication and soft skills to deliver the best possible service to my clients. I have
