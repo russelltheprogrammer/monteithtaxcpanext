@@ -19,7 +19,7 @@ const About = () => {
             I previously worked at a prestigious accounting firm in New York City where I focused on tax work such as consulting, planning, preparation, review,
             accounting, software efficiency, and account management of high net worth individuals and their businesses. 
             I also have experience in the technology industry where I have worked with startup companies and established businesses in areas such as 
-            software engineering, product development, account management, business development, and project management.
+            software engineering, product development, client services, project management, and business development.
             <br/>
             <br/>
             Unlike most accountants, I focus on the technology side. I have always had an interest in technology from a young age but I really discovered

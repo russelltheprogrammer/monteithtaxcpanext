@@ -82,7 +82,7 @@ const ServicesOverview = () => {
       learnMore: true,
       learnMoreText: `The accounting and tax technology industry is constantly changing and evolving. Does your tech stack need improvement? Modernization? Are you just starting out 
       and anxious about what software to choose? Do you want an independent evaluation to make sure you aren't being upsold by tech vendors? I can help you with all of these 
-      questions, concerns, and more. I work full-time in the accounting technology space, and I constantly develop, research, and use the latest technologies.`,
+      questions, concerns, and more. I work full-time in the accounting technology space, and I constantly develop, research, meet with vendors, and use the latest technologies.`,
       icon: <AssessmentIcon sx={iconStyle} />
     },
     { 
