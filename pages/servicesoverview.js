@@ -100,7 +100,7 @@ const ServicesOverview = () => {
     },
     { 
       id: 7, 
-      title: 'Account Services & Project Management', 
+      title: 'Client Services & Project Management', 
       description: 'Overloaded with new work? Let me help you manage your projects and client accounts.',
       learnMore: true,
       learnMoreText: `I have worked in the client services industry for over a decade. I have polished my communication and soft skills to deliver the best possible service to my clients. I have
