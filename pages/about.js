@@ -28,15 +28,14 @@ const About = () => {
             I treat each client&apos;s business and tax situation as unique and thrive to deliver the utmost care and value as if it was my own.
             <br/>
             <br/>
-            I currently consult and contract with accounting technology businesses, startup companies, and accounting firms to help them with their business needs,
+            I currently consult with accounting technology businesses, startup companies, and accounting firms to help them with their business needs,
             such as software development, product development, account management, business development, custom solutions, project management, and other general 
-            consulting. I am always looking to help businesses grow and improve their processes. In addition, I offer traditional tax services to individuals and
-            businesses.
+            consulting. In addition, I offer traditional tax services to individuals and their businesses. I am always looking to help businesses grow and improve their processes.
             <br/>
             <br/>
             I am a graduate of Binghamton University with a Bachelor of Science in Accounting and a Master of Science in Accounting. I passed the CPA exam while attending
             graduate school full time. I am certified in many different software engineering skills, a member of the AICPA, a member of the NYSSCPA, and always looking to learn more. 
-            In my free time, I enjoy exercising, sports, spending time with family and friends, being outside in nature, anime, board games, and food.
+            In my free time, I enjoy exercise, sports, time with family and friends, being outside in nature, anime, board games, and food.
           </p>
         </div>
       </div>
