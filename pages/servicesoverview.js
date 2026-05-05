@@ -3,10 +3,10 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState } from 'react';
 import BalanceIcon from '@mui/icons-material/Balance';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-import CoffeeIcon from '@mui/icons-material/Coffee';
 import KeyboardIcon from '@mui/icons-material/Keyboard';
 import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
-import ImportantDevicesIcon from '@mui/icons-material/ImportantDevices';
+// import ImportantDevicesIcon from '@mui/icons-material/ImportantDevices';
+import CoffeeIcon from '@mui/icons-material/Coffee';
 import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import PolylineIcon from '@mui/icons-material/Polyline';
 import CampaignIcon from '@mui/icons-material/Campaign';
@@ -43,104 +43,68 @@ const ServicesOverview = () => {
   };
 
   const services = [
-    { 
-      id: 1, 
+    {
+      id: 1,
       title: 'Tax Services',
       description: 'Expert tax services for individuals, families, and businesses in compliance with the latest tax laws.',
       learnMore: true,
-      learnMoreText: `Maximize tax savings and plan for future tax events effectively. Preparation and filing for most tax forms such as 1040 (Individual), 1065 (Partnership), 1120 (Corporation), 
+      learnMoreText: `Maximize tax savings and plan for future tax events effectively. Preparation and filing for most tax forms such as 1040 (Individual), 1065 (Partnership), 1120 (Corporation),
       1120S (S-Corporation), 1041 (Trust), 709 (Gift Tax), 1099 (Payments), and more. I have experience in many different industries which can be viewed in the Industries section of the website.`,
       icon: <BalanceIcon sx={iconStyle} />
     },
-    { 
-      id: 2, 
-      title: 'Software Development', 
-      description: 'An accountant that also knows how to code? Yes, it is possible. Let me help you with your software engineering and web development needs.',
+    {
+      id: 2,
+      title: 'Software & Product Development',
+      description: 'An accountant that also knows software development? Yes, it is possible. Let me help guide the product development of your new tax or accounting software.',
       learnMore: true,
-      learnMoreText: `I am skilled in many areas of software development including front-end, back-end, and full-stack development. I have experience with many programming languages and 
-      frameworks such as JavaScript, Typescript, Python, Robotic Process Automation, APIs, HTML, CSS, jQuery, Redux, MongoDB, Mongoose, Express.js, Node.js, React, Next.js, Auth0, Git, 
-      Google Analytics, Tailwind CSS, Shadcn, ChatGPT, and more. I can help you with your website, web applications, or technology/software product. I have coded for startup companies,
-      accounting technology companies, and freelance projects for private clients. Check out my github for more information by clicking this `,
-      learnMoreLink: 'https://github.com/russelltheprogrammer',
-      learnMoreLinkText: 'LINK.',
+      learnMoreText: `I have hands-on experience across programming languages, frameworks, APIs, AI tools, and automation.
+      I keep up to date with all the software in the accounting industry from software that is decades old to software that has just entered the marketplace. 
+      I have worked with startup companies, accounting technology companies, and private clients to bring products to life. I have even built my own product to help
+      my clients estimate their quarterly and year-end taxes at`,
+      learnMoreLink: 'https://taxprojection.com',
+      learnMoreLinkText: 'TaxProjection.com.',
       icon: <DeveloperBoardIcon sx={iconStyle} />
     },
-    { 
-      id: 3, 
-      title: 'Automation & Integrations', 
+    {
+      id: 3,
+      title: 'Tax Planning, Consulting & Advisory',
+      description: 'Plan ahead for future tax events, special projects, expert knowledge, industry specialization, and consulting services for tax-related matters.',
+      learnMore: true,
+      learnMoreText: `Whether it be business structuring, retirement planning, equity compensation, estate planning, multi-state tax planning, living in a foreign country, or another related
+      tax matter, I can help you plan ahead for it. I have experience working with many different types of clients, lets save you some money! I also offer consulting and advisory services for
+      special projects, expert knowledge, industry specialization, and contract based work.`,
+      icon: <AttachMoneyIcon sx={iconStyle} />
+    },
+    {
+      id: 4,
+      title: 'Automation & Integrations',
       description: 'Want to take your business to the next level by using the latest time and cost savings technologies and techniques?',
       learnMore: true,
-      learnMoreText: `If you clicked "Learn More" then I hope that answer is YES! I have experience working with custom developed Python robots, Robotic Process Automation (RPA), and 
-      API integrations. I have partnerships with some of the best accounting technology companies in the industry that specialize in these areas. 
+      learnMoreText: `If you clicked "Learn More" then I hope that answer is YES! I have experience working with custom developed Python robots, Robotic Process Automation (RPA), and
+      API integrations. I have partnerships with some of the best accounting technology companies in the industry that specialize in these areas.
       Let me help you take your business to the next level by automating your repetitive tasks to save you time so that you can focus on other, more value added areas of your business.`,
       icon: <PolylineIcon sx={iconStyle} />
     },
-    { 
-      id: 4, 
-      title: 'Accounting & Tax Technology Consulting', 
+    {
+      id: 5,
+      title: 'Accounting & Tax Technology Consulting',
       description: 'Starting a new company or need help evaluating your current technology stack?',
       learnMore: true,
-      learnMoreText: `The accounting and tax technology industry is constantly changing and evolving. Does your tech stack need improvement? Modernization? Are you just starting out 
-      and anxious about what software to choose? Do you want an independent evaluation to make sure you aren't being upsold by tech vendors? I can help you with all of these 
+      learnMoreText: `The accounting and tax technology industry is constantly changing and evolving. Does your tech stack need improvement? Modernization? Are you just starting out
+      and anxious about what software to choose? Do you want an independent evaluation to make sure you aren't being upsold by tech vendors? I can help you with all of these
       questions, concerns, and more. I work full-time in the accounting technology space, and I constantly develop, research, meet with vendors, and use the latest technologies.`,
       icon: <AssessmentIcon sx={iconStyle} />
     },
-    { 
-      id: 6, 
-      title: 'Product Development', 
-      description: 'Building a new tax or accounting product? Let me help you with product design and development.',
-      learnMore: true,
-      learnMoreText: `I have experience working with accounting technology companies and startups to build new products. I have worked on some of the most cutting edge technologies in 
-      the accounting industry from Robotic Process Automation to Artificial Intelligence to APIs to old school tax software. I keep up to date with all
-      the software in the accounting industry from software that is decades old to software that has just entered the marketplace. Check out my own software that I built in 
-      my spare time to help my clients estimate their quarterly and year-end taxes at`,
-      learnMoreLink: 'https://taxprojection.com',
-      learnMoreLinkText: 'TaxProjection.com.',
-      icon: <ImportantDevicesIcon sx={iconStyle} />
-    },
-    { 
-      id: 7, 
-      title: 'Client Services & Project Management', 
-      description: 'Overloaded with new work? Let me help you manage your projects and client accounts.',
-      learnMore: true,
-      learnMoreText: `I have worked in the client services industry for over a decade. I have polished my communication and soft skills to deliver the best possible service to my clients. I have
-      worked through numerous tax seasons and have managed extreme workloads and stress while never missing a deadline. Let me help you free up
-      time to focus on other areas of your business. I have experience working with a few different workflow management systems, one example being Clickup.`,
-      icon: <DesignServicesIcon sx={iconStyle} />
-    },
-    { 
-      id: 8, 
-      title: 'Tax Planning', 
-      description: 'Plan ahead for future tax events to effectively maximize your tax savings.',
-      learnMore: true,
-      learnMoreText: `Whether it be business structuring, retirement planning, equity compensation, estate planning, multi-state tax planning, living in a foreign country, or another related
-      tax matter, I can help you plan ahead for it. I have experience working with many different types of clients, lets save you some money!`,
-      icon: <AttachMoneyIcon sx={iconStyle} />
-    },
-    { 
-      id: 9, 
-      title: 'Tax Consulting & Advisory', 
-      description: 'Special projects, expert knowledge, industry specialization, and consulting services for tax-related matters, including contract based work.',
-      learnMore: false,
-      icon: <CoffeeIcon sx={iconStyle} />
-    },
-    { 
-      id: 11, 
-      title: 'Bookkeeping & Accounting', 
+    {
+      id: 6,
+      title: 'Bookkeeping & Accounting',
       description: 'Meet your financial reporting needs with accurate and timely bookkeeping and accounting. Including high proficiency in QuickBooks and QBO.',
       learnMore: false,
       icon: <KeyboardIcon sx={iconStyle} />
     },
-    { 
-      id: 12, 
-      title: 'Business Development', 
-      description: 'I will work with you to grow your business and reach your goals with my expert knowledge of the entire accounting industry from tax to accounting to technology.',
-      learnMore: false,
-      icon: <CampaignIcon sx={iconStyle} />
-    },
-    { 
-      id: 13, 
-      title: 'Other Services', 
+    {
+      id: 7,
+      title: 'Other Services',
       description: 'Service not listed? Contact me to see if I can help.',
       learnMore: false,
       icon: <AltRouteIcon sx={iconStyle} />
