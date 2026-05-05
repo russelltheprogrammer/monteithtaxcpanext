@@ -86,7 +86,14 @@ const ServicesOverview = () => {
       icon: <PolylineIcon sx={iconStyle} />
     },
     {
-      id: 5,
+      id: 6,
+      title: 'Bookkeeping & Accounting',
+      description: 'Meet your financial reporting needs with accurate and timely bookkeeping and accounting. Including high proficiency in QuickBooks and QBO.',
+      learnMore: false,
+      icon: <KeyboardIcon sx={iconStyle} />
+    },
+    {
+      id: 7,
       title: 'Accounting & Tax Technology Consulting',
       description: 'Starting a new company or need help evaluating your current technology stack?',
       learnMore: true,
@@ -96,14 +103,7 @@ const ServicesOverview = () => {
       icon: <AssessmentIcon sx={iconStyle} />
     },
     {
-      id: 6,
-      title: 'Bookkeeping & Accounting',
-      description: 'Meet your financial reporting needs with accurate and timely bookkeeping and accounting. Including high proficiency in QuickBooks and QBO.',
-      learnMore: false,
-      icon: <KeyboardIcon sx={iconStyle} />
-    },
-    {
-      id: 7,
+      id: 8,
       title: 'Other Services',
       description: 'Service not listed? Contact me to see if I can help.',
       learnMore: false,
