@@ -17,7 +17,7 @@ const ServicesIndustries = () => {
   };
 
   const industries = [
-    { id: 0, title: 'Accounting & Financial Services', icon: <CalculateIcon sx={iconStyle} />},
+    { id: 0, title: 'Financial Services', icon: <CalculateIcon sx={iconStyle} />},
     { id: 1, title: 'Other Professional Services', icon: <MiscellaneousServicesIcon sx={iconStyle} />},
     { id: 2, title: 'Healthcare', icon: <LocalHospitalIcon sx={iconStyle} />},
     { id: 3, title: 'Technology & Startups', icon: <DeviceHubIcon sx={iconStyle} />},
